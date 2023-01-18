@@ -1,5 +1,4 @@
-@vpmedia/bitcharify
-===================
+# @vpmedia/bitcharify
 
 [![npm version](https://badge.fury.io/js/@vpmedia%2Fbitcharify.svg?v=1.2.3)](https://badge.fury.io/js/@vpmedia%2Fbitcharify)
 [![Node.js CI](https://github.com/vpmedia/bitcharify/actions/workflows/node.js.yml/badge.svg)](https://github.com/vpmedia/bitcharify/actions/workflows/node.js.yml)
