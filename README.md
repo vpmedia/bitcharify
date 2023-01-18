@@ -9,6 +9,6 @@
 
     $ npm install --save @vpmedia/bitcharify
 
-## Credits
+## Credits
 
 Codebase is based on the Pixi.js game engine made by Mathew Groves, Chad Engler.
