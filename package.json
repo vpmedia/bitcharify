@@ -1,7 +1,7 @@
 {
   "name": "@vpmedia/bitcharify",
-  "version": "1.2.0",
-  "description": "@vpmedia/bitcharify is a bitmap font generator targeting the Phaser game engine",
+  "version": "1.3.0",
+  "description": "@vpmedia/bitcharify is a bitmap font generator",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
   "homepage": "https://github.com/vpmedia/bitcharify#readme",
