@@ -1,6 +1,16 @@
 // import { generateFillStyle } from "./generateFillStyle";
 import { toFontString } from "./toFontString";
 
+/**
+ *
+ * @param canvas
+ * @param context
+ * @param metrics
+ * @param x
+ * @param y
+ * @param resolution
+ * @param style
+ */
 export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
   const char = metrics.text;
   const fontProperties = metrics.fontProperties;

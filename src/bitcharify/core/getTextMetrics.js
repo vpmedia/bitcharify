@@ -1,3 +1,15 @@
+/**
+ *
+ * @param text
+ * @param style
+ * @param width
+ * @param height
+ * @param lines
+ * @param lineWidths
+ * @param lineHeight
+ * @param maxLineWidth
+ * @param fontProperties
+ */
 export function getTextMetrics(
   text,
   style,

@@ -16,6 +16,12 @@ const BREAKING_SPACES = [
   0x3000, // ideographic space
 ];
 
+/**
+ * TBD
+ *
+ * @param {string} char TBD
+ * @returns {boolean} TBD
+ */
 export function isBreakingSpace(char) {
   if (typeof char !== "string") {
     return false;

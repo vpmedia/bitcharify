@@ -7,6 +7,12 @@ export const BASELINE_SYMBOL = "M";
 export const BASELINE_MULTIPLIER = 1.4;
 export const HEIGHT_MULTIPLIER = 2.0;
 
+/**
+ *
+ * @param text
+ * @param letterSpacing
+ * @param context
+ */
 export function _measureText(text, letterSpacing, context) {
   let width = context.measureText(text).width;
   if (width > 0) {
@@ -15,16 +21,32 @@ export function _measureText(text, letterSpacing, context) {
   return width;
 }
 
+/**
+ *
+ */
 export function _measureFont() {
   // console.log(font);
   // TODO
   return { fontSize: 0 };
 }
 
+/**
+ *
+ * @param text
+ * @param style
+ * @param canvas
+ */
 export function _wordWrap(text, style, canvas) {
   console.log(text, style, canvas);
 }
 
+/**
+ *
+ * @param text
+ * @param style
+ * @param wordWrap
+ * @param canvas
+ */
 export function measureText(text, style, wordWrap, canvas) {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;
   const font = toFontString(style);

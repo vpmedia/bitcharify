@@ -1,3 +1,8 @@
+/**
+ * TBD
+ *
+ * @returns {string[]} TBD
+ */
 export function graphemeSegmenter() {
   if (typeof Intl?.Segmenter !== "function") {
     return (s) => [...s];

@@ -1,6 +1,15 @@
 import { drawGlyph } from "./drawGlyph";
 import { measureText } from "./measureText";
 
+/**
+ *
+ * @param canvas
+ * @param context
+ * @param config
+ * @param style
+ * @param fontData
+ * @param charList
+ */
 export function generateChars(canvas, context, config, style, fontData, charList) {
   const resolution = config.resolution;
   const textureWidth = config.width;

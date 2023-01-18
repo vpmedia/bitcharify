@@ -2,7 +2,7 @@
  * TBD
  *
  * @param {string} url TBD
- * @returns {Promise}
+ * @returns {Promise} TBD
  */
 export function loadImage(url) {
   return new Promise((resolve, reject) => {

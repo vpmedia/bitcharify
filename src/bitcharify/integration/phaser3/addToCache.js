@@ -4,6 +4,7 @@
  * @param {object} fontData TBD
  * @param {object} frame TBD
  * @param {object} texture TBD
+ * @returns {object} TBD 
  */
 function getBitmapFontData(fontData, frame, texture) {
   const xSpacing = 0;
