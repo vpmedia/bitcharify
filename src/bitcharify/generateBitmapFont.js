@@ -31,7 +31,7 @@ export function generateBitmapFont(canvas, style, options = {}) {
   canvas.height = config.height;
   // init context
   const context = canvas.getContext("2d", { willReadFrequently: true });
-  context.imageSmoothingEnabled = false;
+  // context.imageSmoothingEnabled = false;
   context.imageSmoothingQuality = "high";
   context.setTransform(1, 0, 0, 1, 0, 0);
   context.clearRect(0, 0, canvas.width, canvas.height);
