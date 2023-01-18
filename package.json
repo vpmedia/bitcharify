@@ -1,0 +1,43 @@
+{
+  "name": "@vpmedia/bitcharify",
+  "version": "0.0.1",
+  "description": "@vpmedia/bitcharify is the modern ECMAScript port of the popular bitcharify game engine v2.6.2",
+  "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
+  "license": "MIT",
+  "homepage": "https://github.com/vpmedia/bitcharify#readme",
+  "bugs": {
+    "url": "https://github.com/vpmedia/bitcharify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpmedia/bitcharify.git"
+  },
+  "keywords": [
+    "bitcharify",
+    "phaser"
+  ],
+  "main": "./src/index.js",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jsdoc": "^39.6.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "lint": "eslint \"**/*.js\"",
+    "lint-fix": "eslint \"**/*.js\" --fix",
+    "format": "prettier --write \"**/*.{js,json}\"",
+    "lint-staged": "lint-staged"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=18.0.0"
+  }
+}

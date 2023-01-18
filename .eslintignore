@@ -1,0 +1,10 @@
+#
+# Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# see: https://eslint.org/docs/latest/user-guide/configuring/ignoring-code
+#
+
+/.github
+/.husky
+dist/
+node_modules/
