@@ -1,7 +1,7 @@
 {
   "name": "@vpmedia/bitcharify",
   "version": "0.0.1",
-  "description": "@vpmedia/bitcharify is the modern ECMAScript port of the popular bitcharify game engine v2.6.2",
+  "description": "@vpmedia/bitcharify is a bitmap font generator targeting the Phaser game engine",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
   "homepage": "https://github.com/vpmedia/bitcharify#readme",
