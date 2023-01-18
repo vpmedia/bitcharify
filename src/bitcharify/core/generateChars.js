@@ -2,13 +2,14 @@ import { drawGlyph } from "./drawGlyph";
 import { measureText } from "./measureText";
 
 /**
+ * TBD
  *
- * @param canvas
- * @param context
- * @param config
- * @param style
- * @param fontData
- * @param charList
+ * @param {HTMLCanvasElement} canvas TBD
+ * @param {CanvasRenderingContext2D} context TBD
+ * @param {object} config TBD
+ * @param {object} style TBD
+ * @param {object} fontData TBD
+ * @param {string[]} charList TBD
  */
 export function generateChars(canvas, context, config, style, fontData, charList) {
   const resolution = config.resolution;

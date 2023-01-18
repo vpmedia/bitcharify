@@ -8,10 +8,12 @@ const BASELINE_MULTIPLIER = 1.4;
 const HEIGHT_MULTIPLIER = 2.0;
 
 /**
+ * TBD
  *
- * @param text
- * @param letterSpacing
- * @param context
+ * @param {string} text TBD
+ * @param {number} letterSpacing TBD
+ * @param {CanvasRenderingContext2D} context TBD
+ * @returns {number} TBD
  */
 function _measureText(text, letterSpacing, context) {
   let width = context.measureText(text).width;
@@ -22,7 +24,10 @@ function _measureText(text, letterSpacing, context) {
 }
 
 /**
+ * TBD
  *
+ * @param {string} font TBD
+ * @returns {object} TBD
  */
 function _measureFont(font) {
   const properties = {
@@ -109,21 +114,24 @@ function _measureFont(font) {
 }
 
 /**
+ * TBD
  *
- * @param text
- * @param style
- * @param canvas
+ * @param {string} text TBD
+ * @param {object} style TBD
+ * @param {HTMLCanvasElement} canvas TBD
  */
 function _wordWrap(text, style, canvas) {
   console.log(text, style, canvas);
 }
 
 /**
+ * TBD
  *
- * @param text
- * @param style
- * @param wordWrap
- * @param canvas
+ * @param {string} text TBD
+ * @param {object} style TBD
+ * @param {string} wordWrap TBD
+ * @param {HTMLCanvasElement} canvas TBD
+ * @returns {object} TBD
  */
 export function measureText(text, style, wordWrap, canvas) {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;

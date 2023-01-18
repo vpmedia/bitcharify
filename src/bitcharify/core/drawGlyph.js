@@ -2,14 +2,15 @@
 import { toFontString } from "./toFontString";
 
 /**
+ * TBD
  *
- * @param canvas
- * @param context
- * @param metrics
- * @param x
- * @param y
- * @param resolution
- * @param style
+ * @param {HTMLCanvasElement} canvas TBD
+ * @param {CanvasRenderingContext2D} context TBD
+ * @param {object} metrics TBD
+ * @param {number} x TBD
+ * @param {number} y TBD
+ * @param {number} resolution TBD
+ * @param {object} style TBD
  */
 export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
   const char = metrics.text;
