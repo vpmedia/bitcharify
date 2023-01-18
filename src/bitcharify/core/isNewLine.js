@@ -7,7 +7,7 @@ const NEW_LINES = [
  * TBD
  *
  * @param {string} char TBD
- * @returns {object} TBD 
+ * @returns {object} TBD
  */
 export function isNewline(char) {
   if (typeof char !== "string") {

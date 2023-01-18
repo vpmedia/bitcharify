@@ -1,6 +1,6 @@
 /**
  * TBD
- * 
+ *
  * @param {object} style TBD
  * @returns {string} TBD
  */

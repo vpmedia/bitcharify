@@ -2,10 +2,10 @@ import { graphemeSegmenter } from "./graphemeSegmenter";
 import { getTextMetrics } from "./getTextMetrics";
 import { toFontString } from "./toFontString";
 
-export const METRICS_STRING = "|ÉqÅ";
-export const BASELINE_SYMBOL = "M";
-export const BASELINE_MULTIPLIER = 1.4;
-export const HEIGHT_MULTIPLIER = 2.0;
+const METRICS_STRING = "|ÉqÅ";
+const BASELINE_SYMBOL = "M";
+const BASELINE_MULTIPLIER = 1.4;
+const HEIGHT_MULTIPLIER = 2.0;
 
 /**
  *
@@ -13,7 +13,7 @@ export const HEIGHT_MULTIPLIER = 2.0;
  * @param letterSpacing
  * @param context
  */
-export function _measureText(text, letterSpacing, context) {
+function _measureText(text, letterSpacing, context) {
   let width = context.measureText(text).width;
   if (width > 0) {
     width += (graphemeSegmenter(text).length - 1) * letterSpacing;
@@ -24,10 +24,88 @@ export function _measureText(text, letterSpacing, context) {
 /**
  *
  */
-export function _measureFont() {
-  // console.log(font);
-  // TODO
-  return { fontSize: 0 };
+function _measureFont(font) {
+  const properties = {
+    ascent: 0,
+    descent: 0,
+    fontSize: 0,
+  };
+  if (!window.__BITCHARIFY_CANVAS__) {
+    let canvas = undefined;
+    let context = undefined;
+    try {
+      canvas = new OffscreenCanvas(0, 0);
+      context = canvas.getContext("2d", { willReadFrequently: true });
+    } catch (e) {
+      // pass
+    }
+    if (!canvas || !context?.measureText) {
+      canvas = document.createElement("canvas");
+      context = canvas.getContext("2d", { willReadFrequently: true });
+    }
+    canvas.width = canvas.height = 10;
+    window.__BITCHARIFY_CANVAS__ = canvas;
+    window.__BITCHARIFY_CONTEXT__ = context;
+  }
+  const canvas = window.__BITCHARIFY_CANVAS__;
+  const context = window.__BITCHARIFY_CONTEXT__;
+  context.font = font;
+  const metricsString = METRICS_STRING + BASELINE_SYMBOL;
+  const width = Math.ceil(context.measureText(metricsString).width);
+  let baseline = Math.ceil(context.measureText(TextMetrics.BASELINE_SYMBOL).width);
+  const height = Math.ceil(HEIGHT_MULTIPLIER * baseline);
+  baseline = (baseline * BASELINE_MULTIPLIER) | 0;
+  if (width === 0 || height === 0) {
+    return properties;
+  }
+  canvas.width = width;
+  canvas.height = height;
+  context.fillStyle = "#f00";
+  context.fillRect(0, 0, width, height);
+  context.font = font;
+  context.textBaseline = "alphabetic";
+  context.fillStyle = "#000";
+  context.fillText(metricsString, 0, baseline);
+  const imagedata = context.getImageData(0, 0, width, height).data;
+  const pixels = imagedata.length;
+  const line = width * 4;
+  let i = 0;
+  let idx = 0;
+  let stop = false;
+  // ascent. scan from top to bottom until we find a non red pixel
+  for (i = 0; i < baseline; ++i) {
+    for (let j = 0; j < line; j += 4) {
+      if (imagedata[idx + j] !== 255) {
+        stop = true;
+        break;
+      }
+    }
+    if (!stop) {
+      idx += line;
+    } else {
+      break;
+    }
+  }
+  properties.ascent = baseline - i;
+  idx = pixels - line;
+  stop = false;
+  // descent. scan from bottom to top until we find a non red pixel
+  for (i = height; i > baseline; --i) {
+    for (let j = 0; j < line; j += 4) {
+      if (imagedata[idx + j] !== 255) {
+        stop = true;
+        break;
+      }
+    }
+    if (!stop) {
+      idx -= line;
+    } else {
+      break;
+    }
+  }
+  properties.descent = i - baseline;
+  properties.fontSize = properties.ascent + properties.descent;
+  return properties;
 }
 
 /**
@@ -36,7 +114,7 @@ export function _measureFont() {
  * @param style
  * @param canvas
  */
-export function _wordWrap(text, style, canvas) {
+function _wordWrap(text, style, canvas) {
   console.log(text, style, canvas);
 }
 
@@ -77,7 +155,6 @@ export function measureText(text, style, wordWrap, canvas) {
   let height =
     Math.max(lineHeight, fontProperties.fontSize + style.strokeThickness * 2) +
     (lines.length - 1) * (lineHeight + style.leading);
-  height += fontProperties.fontSize * 0.25; // TODO
   if (style.dropShadow) {
     height += style.dropShadowDistance;
   }
