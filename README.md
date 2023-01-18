@@ -1,0 +1,2 @@
+# bitcharify
+Bitmap Font Generator
