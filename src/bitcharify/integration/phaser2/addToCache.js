@@ -59,7 +59,5 @@ export function addToCache(game, key, fontData, textureSource) {
     base: baseTexture,
   };
   cacheData.font = getBitmapFontData(fontData, baseTexture);
-  // console.log(key);
-  // console.log(cacheData);
   game.cache._cache.bitmapFont[key] = cacheData;
 }
