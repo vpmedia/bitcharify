@@ -7,11 +7,11 @@ import { generateBitmapFont } from "./generateBitmapFont";
  * @param {object} options TBD
  * @returns {object[]} TBD
  */
-export function generateBitmapFonts(canvas, styles, options) {
+export function generateBitmapFonts(canvas, styles, options = {}) {
   const results = [];
-  styles.forEach((style) => {
-    const result = generateBitmapFont(canvas, style, options);
-    results.push({ imageData: canvas.toDataURL(), fontData: result.data, fontStyle: style });
+  styles.forEach((fontStyle) => {
+    const fontData = generateBitmapFont(canvas, fontStyle, options);
+    results.push({ imageData: canvas.toDataURL(), fontData, fontStyle });
   });
   return results;
 }

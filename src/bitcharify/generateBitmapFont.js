@@ -54,5 +54,5 @@ export function generateBitmapFont(canvas, style, options = {}) {
   generateChars(canvas, context, config, style, data, charList);
   generateKernings(context, data, charList);
   // process completed
-  return { canvas, data };
+  return data;
 }
