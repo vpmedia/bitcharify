@@ -59,9 +59,6 @@ export function generateChars(canvas, context, config, style, fontData, charList
       xoffset: 0,
       yoffset: 0,
       xadvance: width - (style.dropShadow ? style.dropShadowDistance : 0) - (style.stroke ? style.strokeThickness : 0),
-      xadvanceRounded: Math.ceil(
-        width - (style.dropShadow ? style.dropShadowDistance : 0) - (style.stroke ? style.strokeThickness : 0)
-      ), // TODO: does xadvance need to be rounded?
     });
     positionX += (textureGlyphWidth + 2 * padding) * resolution;
     positionX = Math.ceil(positionX);
