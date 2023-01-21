@@ -14,7 +14,13 @@
   },
   "keywords": [
     "bitcharify",
-    "phaser"
+    "bitmap",
+    "font",
+    "generator",
+    "factory",
+    "phaser",
+    "phaser2",
+    "phaser3"
   ],
   "main": "./src/index.js",
   "devDependencies": {
