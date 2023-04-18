@@ -1,1 +1,1 @@
-{"version":3,"file":"measureText.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/measureText.js"],"names":[],"mappings":"AA8HA;;;;;;;;GAQG;AACH,kCANW,MAAM,SACN,MAAM,YACN,MAAM,UACN,iBAAiB,GACf,MAAM,CA8ClB"}
+{"version":3,"file":"measureText.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/measureText.js"],"names":[],"mappings":"AA2HA;;;;;;;GAOG;AACH,kCANW,MAAM,SACN,MAAM,YACN,MAAM,UACN,iBAAiB,GACf,MAAM,CA8ClB"}
