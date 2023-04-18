@@ -14,8 +14,8 @@ export function tokenize(text) {
   }
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
-    const nextChar = text[i + 1];
-    if (isBreakingSpace(char, nextChar) || isNewline(char)) {
+    // const nextChar = text[i + 1];
+    if (isBreakingSpace(char) || isNewline(char)) {
       if (token !== "") {
         tokens.push(token);
         token = "";

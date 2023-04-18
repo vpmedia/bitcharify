@@ -1,11 +1,12 @@
 /**
  * TBD.
- * @returns {Function} TBD.
+ * @param {string} s - TBD.
+ * @returns {string[]} TBD.
  */
-export function graphemeSegmenter() {
+export function graphemeSegmenter(s) {
   if (typeof Intl?.Segmenter !== "function") {
-    return (s) => [...s];
+    return [...s];
   }
   const segmenter = new Intl.Segmenter();
-  return (s) => [...segmenter.segment(s)].map((x) => x.segment);
+  return [...segmenter.segment(s)].map((x) => x.segment);
 }
