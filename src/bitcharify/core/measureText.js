@@ -116,16 +116,18 @@ function _measureFont(font) {
  * @param {string} text - TBD.
  * @param {object} style - TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
+ * @returns {string} TBD.
  */
 function _wordWrap(text, style, canvas) {
   console.log(text, style, canvas);
+  return text;
 }
 
 /**
  * TBD.
  * @param {string} text - TBD.
  * @param {object} style - TBD.
- * @param {string} wordWrap - TBD.
+ * @param {boolean} wordWrap - TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
  * @returns {object} TBD.
  */

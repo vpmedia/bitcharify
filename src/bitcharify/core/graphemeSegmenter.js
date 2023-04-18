@@ -1,6 +1,6 @@
 /**
  * TBD.
- * @returns {string[]} TBD.
+ * @returns {Function} TBD.
  */
 export function graphemeSegmenter() {
   if (typeof Intl?.Segmenter !== "function") {

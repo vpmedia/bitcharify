@@ -1,6 +1,6 @@
 /**
  * TBD.
- * @returns {string[]} TBD.
+ * @returns {Function} TBD.
  */
-export function graphemeSegmenter(): string[];
+export function graphemeSegmenter(): Function;
 //# sourceMappingURL=graphemeSegmenter.d.ts.map
