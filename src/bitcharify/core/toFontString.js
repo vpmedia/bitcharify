@@ -1,8 +1,7 @@
 /**
- * TBD
- *
- * @param {object} style TBD
- * @returns {string} TBD
+ * TBD.
+ * @param {object} style - TBD.
+ * @returns {string} TBD.
  */
 export function toFontString(style) {
   const fontSizeString = typeof style.fontSize === "number" ? `${style.fontSize}px` : style.fontSize;

@@ -2,10 +2,9 @@ import { isBreakingSpace } from "./isBreakingSpace";
 import { isNewline } from "./isNewLine";
 
 /**
- * TBD
- *
- * @param {string} text TBD
- * @returns {string[]} TBD
+ * TBD.
+ * @param {string} text - TBD.
+ * @returns {string[]} TBD.
  */
 export function tokenize(text) {
   const tokens = [];

@@ -17,10 +17,9 @@ const BREAKING_SPACES = [
 ];
 
 /**
- * TBD
- *
- * @param {string} char TBD
- * @returns {boolean} TBD
+ * TBD.
+ * @param {string} char - TBD.
+ * @returns {boolean} TBD.
  */
 export function isBreakingSpace(char) {
   if (typeof char !== "string") {

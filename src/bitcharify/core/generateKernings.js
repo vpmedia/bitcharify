@@ -1,9 +1,8 @@
 /**
- * TBD
- *
- * @param {CanvasRenderingContext2D} context TBD
- * @param {object} fontData TBD
- * @param {object[]} charList TBD
+ * TBD.
+ * @param {CanvasRenderingContext2D} context - TBD.
+ * @param {object} fontData - TBD.
+ * @param {object[]} charList - TBD.
  */
 export function generateKernings(context, fontData, charList) {
   for (let i = 0, len = charList.length; i < len; i++) {

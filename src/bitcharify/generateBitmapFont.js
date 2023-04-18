@@ -5,12 +5,11 @@ import { generateKernings } from "./core/generateKernings";
 import { generateChars } from "./core/generateChars";
 
 /**
- * TBD
- *
- * @param {HTMLCanvasElement} canvas TBD
- * @param {object} style TBD
- * @param {object} options TBD
- * @returns {object} TBD
+ * TBD.
+ * @param {HTMLCanvasElement} canvas - TBD.
+ * @param {object} style - TBD.
+ * @param {object} options - TBD.
+ * @returns {object} TBD.
  */
 export function generateBitmapFont(canvas, style, options = {}) {
   // init config

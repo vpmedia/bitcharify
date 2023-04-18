@@ -1,9 +1,8 @@
 import { CHARS_ALPHANUMERIC } from "./const";
 
 /**
- * TBD
- *
- * @returns {object} TBD
+ * TBD.
+ * @returns {object} TBD.
  */
 export function getConfig() {
   return {

@@ -1,8 +1,7 @@
 /**
- * TBD
- *
- * @param {string} url TBD
- * @returns {Promise} TBD
+ * TBD.
+ * @param {string} url - TBD.
+ * @returns {Promise} TBD.
  */
 export function loadImage(url) {
   return new Promise((resolve, reject) => {
