@@ -9,7 +9,7 @@
  * @param {number} lineHeight - TBD.
  * @param {number} maxLineWidth - TBD.
  * @param {object} fontProperties - TBD.
- * @returns {object} TBD
+ * @returns {object} TBD.
  */
 export function getTextMetrics(
   text,
