@@ -25,7 +25,7 @@
     }
   },
   "rules": {
-    "require-jsdoc": ["warn", {
+    "jsdoc/require-jsdoc": ["warn", {
       "require": {
           "FunctionDeclaration": true,
           "MethodDefinition": true,
