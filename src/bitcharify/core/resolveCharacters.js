@@ -2,6 +2,7 @@
  * TBD.
  * @param {string|string[]} chars - TBD.
  * @returns {string[]} TBD.
+ * @throws Error.
  */
 export function resolveCharacters(chars) {
   if (typeof chars === "string") {

@@ -9,6 +9,7 @@ import { measureText } from "./measureText";
  * @param {object} style - TBD.
  * @param {object} fontData - TBD.
  * @param {string[]} charList - TBD.
+ * @throws Error.
  */
 export function generateChars(canvas, context, config, style, fontData, charList) {
   const resolution = config.resolution;
