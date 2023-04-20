@@ -25,15 +25,18 @@
     }
   },
   "rules": {
-    "jsdoc/require-jsdoc": ["warn", {
-      "require": {
+    "jsdoc/require-jsdoc": [
+      "warn",
+      {
+        "require": {
           "FunctionDeclaration": true,
           "MethodDefinition": true,
           "ClassDeclaration": false,
           "ArrowFunctionExpression": false,
           "FunctionExpression": false
+        }
       }
-    }],
+    ],
     "jsdoc/check-indentation": 1,
     "jsdoc/check-line-alignment": 1,
     "jsdoc/check-syntax": 1,
