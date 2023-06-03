@@ -55,7 +55,7 @@ function _measureFont(font) {
   context.font = font;
   const metricsString = METRICS_STRING + BASELINE_SYMBOL;
   const width = Math.ceil(context.measureText(metricsString).width);
-  let baseline = Math.ceil(context.measureText(TextMetrics.BASELINE_SYMBOL).width);
+  let baseline = Math.ceil(context.measureText(BASELINE_SYMBOL).width);
   const height = Math.ceil(HEIGHT_MULTIPLIER * baseline);
   baseline = (baseline * BASELINE_MULTIPLIER) | 0;
   if (width === 0 || height === 0) {
