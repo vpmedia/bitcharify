@@ -1,8 +1,8 @@
-import { getConfig } from "./core/getConfig";
-import { resolveCharacters } from "./core/resolveCharacters";
-import { getFontData } from "./core/getFontData";
-import { generateKernings } from "./core/generateKernings";
-import { generateChars } from "./core/generateChars";
+import { getConfig } from "./core/getConfig.js";
+import { resolveCharacters } from "./core/resolveCharacters.js";
+import { getFontData } from "./core/getFontData.js";
+import { generateKernings } from "./core/generateKernings.js";
+import { generateChars } from "./core/generateChars.js";
 
 /**
  * TBD.

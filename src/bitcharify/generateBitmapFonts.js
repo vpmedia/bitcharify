@@ -1,4 +1,4 @@
-import { generateBitmapFont } from "./generateBitmapFont";
+import { generateBitmapFont } from "./generateBitmapFont.js";
 /**
  * TBD.
  * @param {HTMLCanvasElement} canvas - TBD.

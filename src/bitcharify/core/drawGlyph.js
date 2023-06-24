@@ -1,5 +1,5 @@
 // import { generateFillStyle } from "./generateFillStyle";
-import { toFontString } from "./toFontString";
+import { toFontString } from "./toFontString.js";
 
 /**
  * TBD.

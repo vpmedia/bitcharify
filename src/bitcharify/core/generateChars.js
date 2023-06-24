@@ -1,5 +1,5 @@
-import { drawGlyph } from "./drawGlyph";
-import { measureText } from "./measureText";
+import { drawGlyph } from "./drawGlyph.js";
+import { measureText } from "./measureText.js";
 
 /**
  * TBD.

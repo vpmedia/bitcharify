@@ -1,4 +1,4 @@
-import { CHARS_ALPHANUMERIC } from "./const";
+import { CHARS_ALPHANUMERIC } from "./const.js";
 
 /**
  * TBD.

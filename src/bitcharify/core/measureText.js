@@ -1,6 +1,6 @@
-import { graphemeSegmenter } from "./graphemeSegmenter";
-import { getTextMetrics } from "./getTextMetrics";
-import { toFontString } from "./toFontString";
+import { graphemeSegmenter } from "./graphemeSegmenter.js";
+import { getTextMetrics } from "./getTextMetrics.js";
+import { toFontString } from "./toFontString.js";
 
 const METRICS_STRING = "|ÉqÅ";
 const BASELINE_SYMBOL = "M";

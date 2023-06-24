@@ -1,5 +1,5 @@
-import { isBreakingSpace } from "./isBreakingSpace";
-import { isNewline } from "./isNewLine";
+import { isBreakingSpace } from "./isBreakingSpace.js";
+import { isNewline } from "./isNewLine.js";
 
 /**
  * TBD.
