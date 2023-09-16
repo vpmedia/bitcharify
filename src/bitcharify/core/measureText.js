@@ -1,9 +1,9 @@
-import { graphemeSegmenter } from "./graphemeSegmenter.js";
-import { getTextMetrics } from "./getTextMetrics.js";
-import { toFontString } from "./toFontString.js";
+import { graphemeSegmenter } from './graphemeSegmenter.js';
+import { getTextMetrics } from './getTextMetrics.js';
+import { toFontString } from './toFontString.js';
 
-const METRICS_STRING = "|ÉqÅ";
-const BASELINE_SYMBOL = "M";
+const METRICS_STRING = '|ÉqÅ';
+const BASELINE_SYMBOL = 'M';
 const BASELINE_MULTIPLIER = 1.4;
 const HEIGHT_MULTIPLIER = 2.0;
 
@@ -38,13 +38,13 @@ function _measureFont(font) {
     let context = undefined;
     try {
       canvas = new OffscreenCanvas(0, 0);
-      context = canvas.getContext("2d", { willReadFrequently: true });
+      context = canvas.getContext('2d', { willReadFrequently: true });
     } catch (e) {
       // pass
     }
     if (!canvas || !context?.measureText) {
-      canvas = document.createElement("canvas");
-      context = canvas.getContext("2d", { willReadFrequently: true });
+      canvas = document.createElement('canvas');
+      context = canvas.getContext('2d', { willReadFrequently: true });
     }
     canvas.width = canvas.height = 10;
     window.__BITCHARIFY_CANVAS__ = canvas;
@@ -63,11 +63,11 @@ function _measureFont(font) {
   }
   canvas.width = width;
   canvas.height = height;
-  context.fillStyle = "#f00";
+  context.fillStyle = '#f00';
   context.fillRect(0, 0, width, height);
   context.font = font;
-  context.textBaseline = "alphabetic";
-  context.fillStyle = "#000";
+  context.textBaseline = 'alphabetic';
+  context.fillStyle = '#000';
   context.fillText(metricsString, 0, baseline);
   const imagedata = context.getImageData(0, 0, width, height).data;
   const pixels = imagedata.length;
@@ -142,7 +142,7 @@ export function measureText(text, style, wordWrap, canvas) {
     fontProperties.ascent = style.fontSize;
     fontProperties.descent = 0;
   }
-  const context = canvas.getContext("2d", { willReadFrequently: true });
+  const context = canvas.getContext('2d', { willReadFrequently: true });
   context.font = font;
   const outputText = wordWrap ? _wordWrap(text, style, canvas) : text;
   const lines = outputText.split(/(?:\r\n|\r|\n)/);

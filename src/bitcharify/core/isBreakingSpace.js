@@ -22,7 +22,7 @@ const BREAKING_SPACES = [
  * @returns {boolean} TBD.
  */
 export function isBreakingSpace(char) {
-  if (typeof char !== "string") {
+  if (typeof char !== 'string') {
     return false;
   }
   return BREAKING_SPACES.includes(char.charCodeAt(0));

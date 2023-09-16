@@ -5,7 +5,7 @@
  * @throws Error.
  */
 export function resolveCharacters(chars) {
-  if (typeof chars === "string") {
+  if (typeof chars === 'string') {
     chars = [chars];
   }
   const result = [];
@@ -18,7 +18,7 @@ export function resolveCharacters(chars) {
       const startCode = item[0].charCodeAt(0);
       const endCode = item[1].charCodeAt(0);
       if (endCode < startCode) {
-        throw new Error("Invalid character range.");
+        throw new Error('Invalid character range.');
       }
       for (let i = startCode, j = endCode; i <= j; i++) {
         result.push(String.fromCharCode(i));
@@ -28,7 +28,7 @@ export function resolveCharacters(chars) {
     }
   }
   if (result.length === 0) {
-    throw new Error("Empty set when resolving characters.");
+    throw new Error('Empty set when resolving characters.');
   }
   return result;
 }

@@ -1,5 +1,5 @@
 // import { generateFillStyle } from "./generateFillStyle";
-import { toFontString } from "./toFontString.js";
+import { toFontString } from './toFontString.js';
 
 /**
  * TBD.
@@ -27,7 +27,7 @@ export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
   // context.fillStyle = generateFillStyle(canvas, context, style, resolution, [char], metrics);
   context.fillStyle = style.fill;
   context.strokeStyle = style.stroke;
-  context.shadowColor = "black";
+  context.shadowColor = 'black';
   context.shadowBlur = 0;
   context.shadowOffsetX = 0;
   context.shadowOffsetY = 0;
@@ -38,5 +38,5 @@ export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
     context.fillText(char, tx, ty + metrics.lineHeight - fontProperties.descent);
   }
   context.setTransform(1, 0, 0, 1, 0, 0); // defaults needed for older browsers (e.g. Opera 29)
-  context.fillStyle = "rgba(0, 0, 0, 0)";
+  context.fillStyle = 'rgba(0, 0, 0, 0)';
 }

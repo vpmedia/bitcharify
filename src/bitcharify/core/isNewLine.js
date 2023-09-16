@@ -9,7 +9,7 @@ const NEW_LINES = [
  * @returns {object} TBD.
  */
 export function isNewline(char) {
-  if (typeof char !== "string") {
+  if (typeof char !== 'string') {
     return false;
   }
   return NEW_LINES.includes(char.charCodeAt(0));

@@ -7,12 +7,12 @@ export function loadImage(url) {
   return new Promise((resolve, reject) => {
     const image = new Image();
     const createListeners = () => {
-      image.addEventListener("load", onLoadHandler);
-      image.addEventListener("error", onErrorHandler);
+      image.addEventListener('load', onLoadHandler);
+      image.addEventListener('error', onErrorHandler);
     };
     const removeListeners = () => {
-      image.removeEventListener("load", onLoadHandler);
-      image.removeEventListener("error", onErrorHandler);
+      image.removeEventListener('load', onLoadHandler);
+      image.removeEventListener('error', onErrorHandler);
     };
     const onLoadHandler = (event) => {
       removeListeners();

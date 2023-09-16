@@ -1,5 +1,5 @@
-import { isBreakingSpace } from "./isBreakingSpace.js";
-import { isNewline } from "./isNewLine.js";
+import { isBreakingSpace } from './isBreakingSpace.js';
+import { isNewline } from './isNewLine.js';
 
 /**
  * TBD.
@@ -8,24 +8,24 @@ import { isNewline } from "./isNewLine.js";
  */
 export function tokenize(text) {
   const tokens = [];
-  let token = "";
-  if (typeof text !== "string") {
+  let token = '';
+  if (typeof text !== 'string') {
     return tokens;
   }
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     // const nextChar = text[i + 1];
     if (isBreakingSpace(char) || isNewline(char)) {
-      if (token !== "") {
+      if (token !== '') {
         tokens.push(token);
-        token = "";
+        token = '';
       }
       tokens.push(char);
       continue;
     }
     token += char;
   }
-  if (token !== "") {
+  if (token !== '') {
     tokens.push(token);
   }
   return tokens;

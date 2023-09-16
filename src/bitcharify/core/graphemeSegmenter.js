@@ -4,7 +4,7 @@
  * @returns {string[]} TBD.
  */
 export function graphemeSegmenter(s) {
-  if (typeof Intl?.Segmenter !== "function") {
+  if (typeof Intl?.Segmenter !== 'function') {
     return [...s];
   }
   const segmenter = new Intl.Segmenter();

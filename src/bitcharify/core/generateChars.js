@@ -1,5 +1,5 @@
-import { drawGlyph } from "./drawGlyph.js";
-import { measureText } from "./measureText.js";
+import { drawGlyph } from './drawGlyph.js';
+import { measureText } from './measureText.js';
 
 /**
  * TBD.
@@ -27,7 +27,7 @@ export function generateChars(canvas, context, config, style, fontData, charList
     const width = metrics.width;
     const height = Math.ceil(metrics.height);
     // This is ugly - but italics are given more space so they don't overlap
-    const textureGlyphWidth = Math.ceil((style.fontStyle === "italic" ? 2 : 1) * width);
+    const textureGlyphWidth = Math.ceil((style.fontStyle === 'italic' ? 2 : 1) * width);
     // Can't fit char anymore: next canvas please!
     if (positionY >= textureHeight - height * resolution) {
       throw new Error(
