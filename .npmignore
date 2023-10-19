@@ -7,7 +7,6 @@
 test/
 .github/
 .husky/
-.babelrc.json
 .browserslistrc
 .DS_Store
 .editorconfig
@@ -15,12 +14,13 @@ test/
 .eslintrc.json
 .gitattributes
 .gitignore
-.lintstagedrc.json
 .npmignore
 .npmrc
 .prettierignore
-.prettierrc.json
+babel.config.js
 bitbucket-pipelines.yml
 jest.config.js
+lint-staged.config.js
+prettier.config.js
 tsconfig.json
 webpack.config.babel.js
