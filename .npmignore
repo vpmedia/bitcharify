@@ -6,7 +6,6 @@
 
 test/
 .github/
-.husky/
 .browserslistrc
 .DS_Store
 .editorconfig
