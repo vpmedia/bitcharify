@@ -34,13 +34,13 @@
     "eslint-plugin-jsdoc": "^48.0.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lefthook": "^1.5.6",
-    "prettier": "^3.2.2",
+    "lefthook": "^1.5.7",
+    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
   },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
-    "lint": "eslint --fix \"**/*.{js,jsx}\"",
+    "lint": "eslint \"**/*.{js,jsx}\"",
     "typecheck": "tsc",
     "format": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "lefthook:install": "lefthook install",
