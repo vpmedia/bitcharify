@@ -1,6 +1,6 @@
 {
   "name": "@vpmedia/bitcharify",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "@vpmedia/bitcharify is a bitmap font generator",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
@@ -27,7 +27,7 @@
   "type": "module",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@types/jest": "^29.5.11",
+    "@types/jest": "^29.5.12",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.6.3",
