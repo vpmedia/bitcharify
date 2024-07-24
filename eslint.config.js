@@ -72,7 +72,7 @@ export default [
       'unicorn/no-new-array': 'warn',
       'unicorn/better-regex': 'warn',
       'unicorn/no-zero-fractions': 'warn',
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
       'prefer-arrow-callback': 'warn',
       'prefer-template': 'warn',
       // 'import/extensions': ['warn', 'always'],
