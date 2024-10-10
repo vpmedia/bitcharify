@@ -72,6 +72,7 @@ export default [
       'unicorn/no-new-array': 'warn',
       'unicorn/better-regex': 'warn',
       'unicorn/no-zero-fractions': 'warn',
+      'unicorn/prefer-global-this': 'warn',
       'no-unused-vars': 'off',
       'prefer-arrow-callback': 'warn',
       'prefer-template': 'warn',
