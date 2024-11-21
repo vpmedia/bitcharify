@@ -21,9 +21,9 @@ const BREAKING_SPACES = [
  * @param {string} char - TBD.
  * @returns {boolean} TBD.
  */
-export function isBreakingSpace(char) {
+export const isBreakingSpace = (char) => {
   if (typeof char !== 'string') {
     return false;
   }
   return BREAKING_SPACES.includes(char.charCodeAt(0));
-}
+};

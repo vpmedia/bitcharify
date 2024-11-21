@@ -2,7 +2,7 @@
  * TBD.
  * @returns {object} TBD.
  */
-export function getFontData() {
+export const getFontData = () => {
   return {
     info: [],
     common: [],
@@ -11,4 +11,4 @@ export function getFontData() {
     kerning: [],
     distanceField: [],
   };
-}
+};

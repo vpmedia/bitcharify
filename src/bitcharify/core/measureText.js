@@ -1,5 +1,5 @@
-import { graphemeSegmenter } from './graphemeSegmenter.js';
 import { getTextMetrics } from './getTextMetrics.js';
+import { graphemeSegmenter } from './graphemeSegmenter.js';
 import { toFontString } from './toFontString.js';
 
 const METRICS_STRING = '|ÉqÅ';
@@ -131,7 +131,7 @@ function _wordWrap(text, style, canvas) {
  * @param {HTMLCanvasElement} canvas - TBD.
  * @returns {object} TBD.
  */
-export function measureText(text, style, wordWrap, canvas) {
+export const measureText = (text, style, wordWrap, canvas) => {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;
   const font = toFontString(style);
   const fontProperties = _measureFont(font);
@@ -175,4 +175,4 @@ export function measureText(text, style, wordWrap, canvas) {
     maxLineWidth,
     fontProperties
   );
-}
+};

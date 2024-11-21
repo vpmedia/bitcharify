@@ -4,7 +4,7 @@
  * @returns {string[]} TBD.
  * @throws Error.
  */
-export function resolveCharacters(chars) {
+export const resolveCharacters = (chars) => {
   if (typeof chars === 'string') {
     chars = [chars];
   }
@@ -31,4 +31,4 @@ export function resolveCharacters(chars) {
     throw new Error('Empty set when resolving characters.');
   }
   return result;
-}
+};

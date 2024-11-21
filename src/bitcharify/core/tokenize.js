@@ -6,7 +6,7 @@ import { isNewline } from './isNewLine.js';
  * @param {string} text - TBD.
  * @returns {string[]} TBD.
  */
-export function tokenize(text) {
+export const tokenize = (text) => {
   const tokens = [];
   let token = '';
   if (typeof text !== 'string') {
@@ -29,4 +29,4 @@ export function tokenize(text) {
     tokens.push(token);
   }
   return tokens;
-}
+};

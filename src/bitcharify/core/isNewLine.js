@@ -8,9 +8,9 @@ const NEW_LINES = [
  * @param {string} char - TBD.
  * @returns {object} TBD.
  */
-export function isNewline(char) {
+export const isNewline = (char) => {
   if (typeof char !== 'string') {
     return false;
   }
   return NEW_LINES.includes(char.charCodeAt(0));
-}
+};

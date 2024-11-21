@@ -4,7 +4,7 @@ import { CHARS_ALPHANUMERIC } from './const.js';
  * TBD.
  * @returns {object} TBD.
  */
-export function getConfig() {
+export const getConfig = () => {
   return {
     resolution: 1,
     width: 512,
@@ -12,4 +12,4 @@ export function getConfig() {
     padding: 4,
     chars: CHARS_ALPHANUMERIC,
   };
-}
+};

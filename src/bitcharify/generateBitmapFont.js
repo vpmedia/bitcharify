@@ -1,8 +1,8 @@
-import { getConfig } from './core/getConfig.js';
-import { resolveCharacters } from './core/resolveCharacters.js';
-import { getFontData } from './core/getFontData.js';
-import { generateKernings } from './core/generateKernings.js';
 import { generateChars } from './core/generateChars.js';
+import { generateKernings } from './core/generateKernings.js';
+import { getConfig } from './core/getConfig.js';
+import { getFontData } from './core/getFontData.js';
+import { resolveCharacters } from './core/resolveCharacters.js';
 
 /**
  * TBD.
@@ -11,7 +11,7 @@ import { generateChars } from './core/generateChars.js';
  * @param {object} options - TBD.
  * @returns {object} TBD.
  */
-export function generateBitmapFont(canvas, style, options = {}) {
+export const generateBitmapFont = (canvas, style, options = {}) => {
   // init config
   const defaultConfig = getConfig();
   const config = { ...defaultConfig, ...options };
@@ -54,4 +54,4 @@ export function generateBitmapFont(canvas, style, options = {}) {
   generateKernings(context, data, charList);
   // process completed
   return data;
-}
+};

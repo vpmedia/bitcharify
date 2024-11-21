@@ -3,7 +3,7 @@
  * @param {object} style - TBD.
  * @returns {string} TBD.
  */
-export function toFontString(style) {
+export const toFontString = (style) => {
   const fontSizeString = typeof style.fontSize === 'number' ? `${style.fontSize}px` : style.fontSize;
   let fontFamilies = style.fontFamily;
   if (!Array.isArray(style.fontFamily)) {
@@ -17,4 +17,4 @@ export function toFontString(style) {
     fontFamilies[i] = fontFamily;
   }
   return `${style.fontStyle} ${style.fontVariant} ${style.fontWeight} ${fontSizeString} ${fontFamilies.join(',')}`;
-}
+};

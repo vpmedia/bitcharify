@@ -4,7 +4,7 @@
  * @param {object} fontData - TBD.
  * @param {object[]} charList - TBD.
  */
-export function generateKernings(context, fontData, charList) {
+export const generateKernings = (context, fontData, charList) => {
   for (let i = 0, len = charList.length; i < len; i++) {
     const first = charList[i];
     for (let j = 0; j < len; j++) {
@@ -22,4 +22,4 @@ export function generateKernings(context, fontData, charList) {
       }
     }
   }
-}
+};

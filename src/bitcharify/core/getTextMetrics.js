@@ -11,7 +11,7 @@
  * @param {object} fontProperties - TBD.
  * @returns {object} TBD.
  */
-export function getTextMetrics(
+export const getTextMetrics = (
   text,
   style,
   width,
@@ -21,7 +21,7 @@ export function getTextMetrics(
   lineHeight,
   maxLineWidth,
   fontProperties
-) {
+) => {
   return {
     text,
     style,
@@ -33,4 +33,4 @@ export function getTextMetrics(
     maxLineWidth,
     fontProperties,
   };
-}
+};

@@ -3,7 +3,7 @@
  * @param {string} url - TBD.
  * @returns {Promise} TBD.
  */
-export function loadImage(url) {
+export const loadImage = (url) => {
   return new Promise((resolve, reject) => {
     const image = new Image();
     const createListeners = () => {
@@ -25,4 +25,4 @@ export function loadImage(url) {
     createListeners();
     image.src = url;
   });
-}
+};

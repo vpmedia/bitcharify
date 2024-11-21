@@ -11,7 +11,7 @@ import { measureText } from './measureText.js';
  * @param {string[]} charList - TBD.
  * @throws Error.
  */
-export function generateChars(canvas, context, config, style, fontData, charList) {
+export const generateChars = (canvas, context, config, style, fontData, charList) => {
   const resolution = config.resolution;
   const textureWidth = config.width;
   const textureHeight = config.height;
@@ -63,4 +63,4 @@ export function generateChars(canvas, context, config, style, fontData, charList
     positionX += (textureGlyphWidth + 2 * padding) * resolution;
     positionX = Math.ceil(positionX);
   }
-}
+};

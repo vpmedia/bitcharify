@@ -11,7 +11,7 @@ import { toFontString } from './toFontString.js';
  * @param {number} resolution - TBD.
  * @param {object} style - TBD.
  */
-export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
+export const drawGlyph = (canvas, context, metrics, x, y, resolution, style) => {
   const char = metrics.text;
   const fontProperties = metrics.fontProperties;
   context.translate(x, y);
@@ -39,4 +39,4 @@ export function drawGlyph(canvas, context, metrics, x, y, resolution, style) {
   }
   context.setTransform(1, 0, 0, 1, 0, 0); // defaults needed for older browsers (e.g. Opera 29)
   context.fillStyle = 'rgba(0, 0, 0, 0)';
-}
+};
