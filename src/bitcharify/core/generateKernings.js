@@ -1,8 +1,8 @@
 /**
  * TBD.
  * @param {CanvasRenderingContext2D} context - TBD.
- * @param {object} fontData - TBD.
- * @param {object[]} charList - TBD.
+ * @param {import('../typedef.js').FontData} fontData - TBD.
+ * @param {string[]} charList - TBD.
  */
 export const generateKernings = (context, fontData, charList) => {
   for (let i = 0, len = charList.length; i < len; i++) {

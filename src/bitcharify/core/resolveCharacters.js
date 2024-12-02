@@ -1,6 +1,6 @@
 /**
  * TBD.
- * @param {string|string[]} chars - TBD.
+ * @param {(string|string[])[]} chars - TBD.
  * @returns {string[]} TBD.
  * @throws Error.
  */

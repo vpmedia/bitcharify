@@ -1,1 +1,1 @@
-{"version":3,"file":"getTextMetrics.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/getTextMetrics.js"],"names":[],"mappings":"AAaO,qCAXI,MAAM,SACN,MAAM,SACN,MAAM,UACN,MAAM,SACN,MAAM,cACN,MAAM,EAAE,cACR,MAAM,gBACN,MAAM,kBACN,MAAM,GACJ,MAAM,CAwBlB"}
+{"version":3,"file":"getTextMetrics.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/getTextMetrics.js"],"names":[],"mappings":"AAaO,qCAXI,MAAM,SACN,OAAO,eAAe,EAAE,SAAS,SACjC,MAAM,UACN,MAAM,SACN,MAAM,EAAE,cACR,MAAM,EAAE,cACR,MAAM,gBACN,MAAM,kBACN,OAAO,eAAe,EAAE,cAAc,GACpC,OAAO,eAAe,EAAE,WAAW,CAwB/C"}

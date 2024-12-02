@@ -5,9 +5,9 @@ import { measureText } from './measureText.js';
  * TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
  * @param {CanvasRenderingContext2D} context - TBD.
- * @param {object} config - TBD.
- * @param {object} style - TBD.
- * @param {object} fontData - TBD.
+ * @param {import('../typedef.js').BitmapFontConfig} config - TBD.
+ * @param {import('../typedef.js').FontStyle} style - TBD.
+ * @param {import('../typedef.js').FontData} fontData - TBD.
  * @param {string[]} charList - TBD.
  * @throws Error.
  */

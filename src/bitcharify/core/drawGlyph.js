@@ -5,11 +5,11 @@ import { toFontString } from './toFontString.js';
  * TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
  * @param {CanvasRenderingContext2D} context - TBD.
- * @param {object} metrics - TBD.
+ * @param {import('../typedef.js').TextMetrics} metrics - TBD.
  * @param {number} x - TBD.
  * @param {number} y - TBD.
  * @param {number} resolution - TBD.
- * @param {object} style - TBD.
+ * @param {import('../typedef.js').FontStyle} style - TBD.
  */
 export const drawGlyph = (canvas, context, metrics, x, y, resolution, style) => {
   const char = metrics.text;

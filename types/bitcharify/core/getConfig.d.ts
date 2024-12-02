@@ -1,2 +1,2 @@
-export function getConfig(): object;
+export function getConfig(): import("../typedef.js").BitmapFontConfig;
 //# sourceMappingURL=getConfig.d.ts.map

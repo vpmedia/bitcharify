@@ -1,1 +1,1 @@
-{"version":3,"file":"generateKernings.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/generateKernings.js"],"names":[],"mappings":"AAMO,0CAJI,wBAAwB,YACxB,MAAM,YACN,MAAM,EAAE,QAoBlB"}
+{"version":3,"file":"generateKernings.d.ts","sourceRoot":"","sources":["../../../src/bitcharify/core/generateKernings.js"],"names":[],"mappings":"AAMO,0CAJI,wBAAwB,YACxB,OAAO,eAAe,EAAE,QAAQ,YAChC,MAAM,EAAE,QAoBlB"}

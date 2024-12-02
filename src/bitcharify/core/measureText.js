@@ -25,7 +25,7 @@ function _measureText(text, letterSpacing, context) {
 /**
  * TBD.
  * @param {string} font - TBD.
- * @returns {object} TBD.
+ * @returns {import('../typedef.js').FontProperties} TBD.
  */
 function _measureFont(font) {
   const properties = {
@@ -114,7 +114,7 @@ function _measureFont(font) {
 /**
  * TBD.
  * @param {string} text - TBD.
- * @param {object} style - TBD.
+ * @param {import('../typedef.js').FontStyle} style - TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
  * @returns {string} TBD.
  */
@@ -126,10 +126,10 @@ function _wordWrap(text, style, canvas) {
 /**
  * TBD.
  * @param {string} text - TBD.
- * @param {object} style - TBD.
+ * @param {import('../typedef.js').FontStyle} style - TBD.
  * @param {boolean} wordWrap - TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
- * @returns {object} TBD.
+ * @returns {import('../typedef.js').TextMetrics} TBD.
  */
 export const measureText = (text, style, wordWrap, canvas) => {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;

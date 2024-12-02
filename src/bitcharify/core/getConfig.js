@@ -2,7 +2,7 @@ import { CHARS_ALPHANUMERIC } from './const.js';
 
 /**
  * TBD.
- * @returns {object} TBD.
+ * @returns {import('../typedef.js').BitmapFontConfig} TBD.
  */
 export const getConfig = () => {
   return {

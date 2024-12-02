@@ -7,9 +7,9 @@ import { resolveCharacters } from './core/resolveCharacters.js';
 /**
  * TBD.
  * @param {HTMLCanvasElement} canvas - TBD.
- * @param {object} style - TBD.
- * @param {object} options - TBD.
- * @returns {object} TBD.
+ * @param {import('./typedef.js').FontStyle} style - TBD.
+ * @param {import('./typedef.js').BitmapFontConfig} options - TBD.
+ * @returns {import('./typedef.js').FontData} TBD.
  */
 export const generateBitmapFont = (canvas, style, options = {}) => {
   // init config

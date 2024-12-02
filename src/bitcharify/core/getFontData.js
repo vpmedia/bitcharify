@@ -1,6 +1,6 @@
 /**
  * TBD.
- * @returns {object} TBD.
+ * @returns {import('../typedef.js').FontData} TBD.
  */
 export const getFontData = () => {
   return {
