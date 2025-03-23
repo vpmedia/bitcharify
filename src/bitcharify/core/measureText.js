@@ -28,6 +28,41 @@ function _measureText(text, letterSpacing, context) {
  * @returns {import('../typedef.js').FontProperties} TBD.
  */
 function _measureFont(font) {
+  if (!window.__BITCHARIFY_CANVAS__) {
+    let canvas = undefined;
+    let context = undefined;
+    try {
+      canvas = new OffscreenCanvas(0, 0);
+      context = canvas.getContext('2d', { willReadFrequently: true });
+    } catch (e) {
+      // pass
+    }
+    if (!canvas || !context?.measureText) {
+      canvas = document.createElement('canvas');
+      context = canvas.getContext('2d', { willReadFrequently: true });
+    }
+    canvas.width = canvas.height = 10;
+    window.__BITCHARIFY_CANVAS__ = canvas;
+    window.__BITCHARIFY_CONTEXT__ = context;
+  }
+  /** @type {CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D} */
+  const context = window.__BITCHARIFY_CONTEXT__;
+  context.font = font;
+  const metrics = context.measureText(METRICS_STRING + BASELINE_SYMBOL);
+  const properties = {
+    ascent: Math.ceil(metrics.actualBoundingBoxAscent),
+    descent: Math.ceil(metrics.actualBoundingBoxDescent),
+    fontSize: Math.ceil(metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent),
+  };
+  return properties;
+}
+
+/**
+ * TBD.
+ * @param {string} font - TBD.
+ * @returns {import('../typedef.js').FontProperties} TBD.
+ */
+function _measureFontFallback(font) {
   const properties = {
     ascent: 0,
     descent: 0,
@@ -78,7 +113,8 @@ function _measureFont(font) {
   // ascent. scan from top to bottom until we find a non red pixel
   for (i = 0; i < baseline; ++i) {
     for (let j = 0; j < line; j += 4) {
-      if (imagedata[idx + j] !== 255) {
+      // issue: firefox returns 253 and not 255 for the red pixel value
+      if (imagedata[idx + j] < 253) {
         stop = true;
         break;
       }
@@ -95,7 +131,8 @@ function _measureFont(font) {
   // descent. scan from bottom to top until we find a non red pixel
   for (i = height; i > baseline; --i) {
     for (let j = 0; j < line; j += 4) {
-      if (imagedata[idx + j] !== 255) {
+      // issue: firefox returns 253 and not 255 for the red pixel value
+      if (imagedata[idx + j] < 253) {
         stop = true;
         break;
       }
@@ -134,7 +171,10 @@ function _wordWrap(text, style, canvas) {
 export const measureText = (text, style, wordWrap, canvas) => {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;
   const font = toFontString(style);
-  const fontProperties = _measureFont(font);
+  let fontProperties = _measureFont(font);
+  if (!fontProperties.fontSize) {
+    fontProperties = _measureFontFallback(font);
+  }
   // fallback in case UA disallow canvas data extraction
   // (toDataURI, getImageData functions)
   if (fontProperties.fontSize === 0) {
