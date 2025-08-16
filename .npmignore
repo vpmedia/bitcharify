@@ -18,7 +18,7 @@ test/
 .prettierignore
 babel.config.js
 bitbucket-pipelines.yml
-jest.config.js
+vitest.config.js
 lint-staged.config.js
 prettier.config.js
 tsconfig.json
