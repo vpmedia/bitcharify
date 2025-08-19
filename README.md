@@ -7,7 +7,7 @@
 
 ## Getting started
 
-    $ npm install --save @vpmedia/bitcharify
+    $ pnpm add @vpmedia/bitcharify
 
 ## Credits
 

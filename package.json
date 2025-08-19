@@ -48,5 +48,8 @@
     "not dead",
     "not op_mini all",
     "iOS >= 14"
-  ]
+  ],
+  "dependencies": {
+    "@types/node": "^24.3.0"
+  }
 }
