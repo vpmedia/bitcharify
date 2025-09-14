@@ -50,7 +50,7 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...jsdocPlugin.configs['flat/recommended'].rules,
-      ...unicornPlugin.configs['flat/recommended'].rules,
+      ...unicornPlugin.configs.recommended.rules,
       'unicorn/filename-case': 'off',
       'unicorn/no-null': 'off',
       'unicorn/prevent-abbreviations': 'off',
