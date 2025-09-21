@@ -1,6 +1,6 @@
 # @vpmedia/bitcharify
 
-[![npm version](https://badge.fury.io/js/@vpmedia%2Fbitcharify.svg?v=1.16.0)](https://badge.fury.io/js/@vpmedia%2Fbitcharify)
+[![npm version](https://badge.fury.io/js/@vpmedia%2Fbitcharify.svg?v=1.17.0)](https://badge.fury.io/js/@vpmedia%2Fbitcharify)
 [![Node.js CI](https://github.com/vpmedia/bitcharify/actions/workflows/ci.yml/badge.svg)](https://github.com/vpmedia/bitcharify/actions/workflows/ci.yml)
 
 @vpmedia/bitcharify is a bitmap font generator targeting the Phaser game engine.
