@@ -4,9 +4,9 @@ const NEW_LINES = [
 ];
 
 /**
- * TBD.
- * @param {string} char - TBD.
- * @returns {boolean} TBD.
+ * Checks if a character is a new line character.
+ * @param {string} char - The character to check.
+ * @returns {boolean} True if the character is a new line character, false otherwise.
  */
 export const isNewline = (char) => {
   if (typeof char !== 'string') {

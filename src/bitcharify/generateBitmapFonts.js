@@ -1,10 +1,10 @@
 import { generateBitmapFont } from './generateBitmapFont.js';
 /**
- * TBD.
- * @param {HTMLCanvasElement} canvas - TBD.
- * @param {import('./typedef.js').FontStyle[]} styles - TBD.
- * @param {import('./typedef.js').BitmapFontConfig} options - TBD.
- * @returns {import('./typedef.js').BitmapFontData[]} TBD.
+ * Generates multiple bitmap fonts from font styles.
+ * @param {HTMLCanvasElement} canvas - The canvas to render the bitmap fonts on.
+ * @param {import('./typedef.js').FontStyle[]} styles - The font styles to generate bitmap fonts for.
+ * @param {import('./typedef.js').BitmapFontConfig} options - The configuration options for the bitmap fonts.
+ * @returns {import('./typedef.js').BitmapFontData[]} The generated bitmap font data.
  */
 export const generateBitmapFonts = (canvas, styles, options = {}) => {
   const results = [];

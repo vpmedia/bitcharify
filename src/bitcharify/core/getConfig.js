@@ -1,8 +1,8 @@
 import { CHARS_ALPHANUMERIC } from './const.js';
 
 /**
- * TBD.
- * @returns {import('../typedef.js').BitmapFontConfig} TBD.
+ * Gets the default bitmap font configuration.
+ * @returns {import('../typedef.js').BitmapFontConfig} The default bitmap font configuration.
  */
 export const getConfig = () => {
   return {

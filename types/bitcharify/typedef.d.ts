@@ -1,115 +1,115 @@
 export const TYPE_CHECKING: true;
 export type FontStyle = {
     /**
-     * - TBD.
+     * - The font size in pixels.
      */
     fontSize: number;
     /**
-     * - TBD.
+     * - The leading (line spacing) in pixels.
      */
     leading: number;
     /**
-     * - TBD.
+     * - The letter spacing in pixels.
      */
     letterSpacing: number;
     /**
-     * - TBD.
+     * - The line height in pixels.
      */
     lineHeight: number;
     /**
-     * - TBD.
+     * - The miter limit for stroke joins.
      */
     miterLimit: number;
     /**
-     * - TBD.
+     * - The padding around the text in pixels.
      */
     padding: number;
     /**
-     * - TBD.
+     * - The thickness of the text stroke in pixels.
      */
     strokeThickness: number;
     /**
-     * - TBD.
+     * - The font family or families to use.
      */
     fontFamily: string | string[];
     /**
-     * - TBD.
+     * - The style of the font (e.g., 'normal', 'italic').
      */
     fontStyle: string;
     /**
-     * - TBD.
+     * - The variant of the font (e.g., 'normal', 'small-caps').
      */
     fontVariant: string;
     /**
-     * - TBD.
+     * - The weight of the font (e.g., 'normal', 'bold').
      */
     fontWeight: string;
     /**
-     * - TBD.
+     * - The fill color of the text.
      */
     fill?: string;
     /**
-     * - TBD.
+     * - The stroke color of the text.
      */
     stroke?: string;
     /**
-     * - TBD.
+     * - The baseline alignment of the text.
      */
     textBaseline?: CanvasTextBaseline;
     /**
-     * - TBD.
+     * - The line join style for strokes.
      */
     lineJoin?: CanvasLineJoin;
     /**
-     * - TBD.
+     * - Whether to enable word wrapping.
      */
     wordWrap?: boolean;
     /**
-     * - TBD.
+     * - The color of the drop shadow.
      */
     dropShadow?: string;
     /**
-     * - TBD.
+     * - The distance of the drop shadow in pixels.
      */
     dropShadowDistance?: number;
 };
 export type FontProperties = {
     /**
-     * - TBD.
+     * - The font size in pixels.
      */
     fontSize: number;
     /**
-     * - TBD.
+     * - The ascent of the font in pixels.
      */
     ascent: number;
     /**
-     * - TBD.
+     * - The descent of the font in pixels.
      */
     descent: number;
 };
 export type FontData = {
     /**
-     * - TBD.
+     * - The font metadata information.
      */
     info: {
         face: string | string[];
         size: number;
     }[];
     /**
-     * - TBD.
+     * - The common font properties.
      */
     common: {
         lineHeight: number;
     }[];
     /**
-     * - TBD.
+     * - The font page information.
      */
     page: {
         id: number;
         file: string;
     }[];
     /**
-     * - TBD.
+     * - The character data for each glyph.
      */
     char: {
         id: number;
@@ -123,7 +123,7 @@ export type FontData = {
         xadvance: number;
     }[];
     /**
-     * - TBD.
+     * - The kerning pairs for character spacing.
      */
     kerning: {
         first: number;
@@ -131,81 +131,81 @@ export type FontData = {
         amount: number;
     }[];
     /**
-     * - TBD.
+     * - The distance field data for the font.
      */
     distanceField: number[];
 };
 export type TextMetrics = {
     /**
-     * - TBD.
+     * - The text content.
      */
     text: string;
     /**
-     * - TBD.
+     * - The font style used for the text.
      */
     style: FontStyle;
     /**
-     * - TBD.
+     * - The width of the text in pixels.
      */
     width: number;
     /**
-     * - TBD.
+     * - The height of the text in pixels.
      */
     height: number;
     /**
-     * - TBD.
+     * - The text broken into lines.
      */
     lines: string[];
     /**
-     * - TBD.
+     * - The width of each line in pixels.
      */
     lineWidths: number[];
     /**
-     * - TBD.
+     * - The height of each line in pixels.
      */
     lineHeight: number;
     /**
-     * - TBD.
+     * - The maximum width of any line in pixels.
      */
     maxLineWidth: number;
     /**
-     * - TBD.
+     * - The properties of the font used.
      */
     fontProperties: FontProperties;
 };
 export type BitmapFontConfig = {
     /**
-     * - TBD.
+     * - The resolution of the bitmap font.
      */
     resolution?: number;
     /**
-     * - TBD.
+     * - The width of the bitmap font texture in pixels.
      */
     width?: number;
     /**
-     * - TBD.
+     * - The height of the bitmap font texture in pixels.
      */
     height?: number;
     /**
-     * - TBD.
+     * - The padding around characters in pixels.
      */
     padding?: number;
     /**
-     * - TBD.
+     * - The characters to include in the bitmap font.
      */
     chars?: (string | string[])[];
 };
 export type BitmapFontData = {
     /**
-     * - TBD.
+     * - The font style used for the bitmap font.
      */
     fontStyle: FontStyle;
     /**
-     * - TBD.
+     * - The raw font data.
      */
     fontData: FontData;
     /**
-     * - TBD.
+     * - The base64 encoded image data of the bitmap font.
      */
     imageData: string;
 };

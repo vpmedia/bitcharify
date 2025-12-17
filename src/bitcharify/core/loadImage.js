@@ -1,7 +1,7 @@
 /**
- * TBD.
- * @param {string} url - TBD.
- * @returns {Promise} TBD.
+ * Loads an image from a URL.
+ * @param {string} url - The URL of the image to load.
+ * @returns {Promise} A promise that resolves to the loaded image.
  */
 export const loadImage = (url) => {
   return new Promise((resolve, reject) => {

@@ -1,8 +1,8 @@
 /**
- * TBD.
- * @param {(string|string[])[]} chars - TBD.
- * @returns {string[]} TBD.
- * @throws Error.
+ * Resolves character arrays to a flat array of characters.
+ * @param {(string|string[])[]} chars - The character arrays to resolve.
+ * @returns {string[]} The resolved flat array of characters.
+ * @throws {Error} TBD.
  */
 export const resolveCharacters = (chars) => {
   if (typeof chars === 'string') {

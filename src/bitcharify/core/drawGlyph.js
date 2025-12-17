@@ -2,14 +2,14 @@
 import { toFontString } from './toFontString.js';
 
 /**
- * TBD.
- * @param {HTMLCanvasElement} canvas - TBD.
- * @param {CanvasRenderingContext2D} context - TBD.
- * @param {import('../typedef.js').TextMetrics} metrics - TBD.
- * @param {number} x - TBD.
- * @param {number} y - TBD.
- * @param {number} resolution - TBD.
- * @param {import('../typedef.js').FontStyle} style - TBD.
+ * Draws a glyph on the canvas.
+ * @param {HTMLCanvasElement} canvas - The canvas to draw on.
+ * @param {CanvasRenderingContext2D} context - The canvas rendering context.
+ * @param {import('../typedef.js').TextMetrics} metrics - The text metrics for the glyph.
+ * @param {number} x - The x position to draw the glyph at.
+ * @param {number} y - The y position to draw the glyph at.
+ * @param {number} resolution - The resolution of the canvas.
+ * @param {import('../typedef.js').FontStyle} style - The font style to use for drawing.
  */
 export const drawGlyph = (canvas, context, metrics, x, y, resolution, style) => {
   const char = metrics.text;

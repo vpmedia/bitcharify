@@ -2,9 +2,9 @@ import { isBreakingSpace } from './isBreakingSpace.js';
 import { isNewline } from './isNewLine.js';
 
 /**
- * TBD.
- * @param {string} text - TBD.
- * @returns {string[]} TBD.
+ * Tokenizes text into individual characters.
+ * @param {string} text - The text to tokenize.
+ * @returns {string[]} The array of individual characters.
  */
 export const tokenize = (text) => {
   const tokens = [];

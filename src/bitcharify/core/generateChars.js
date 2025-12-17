@@ -2,14 +2,14 @@ import { drawGlyph } from './drawGlyph.js';
 import { measureText } from './measureText.js';
 
 /**
- * TBD.
- * @param {HTMLCanvasElement} canvas - TBD.
- * @param {CanvasRenderingContext2D} context - TBD.
- * @param {import('../typedef.js').BitmapFontConfig} config - TBD.
- * @param {import('../typedef.js').FontStyle} style - TBD.
- * @param {import('../typedef.js').FontData} fontData - TBD.
- * @param {string[]} charList - TBD.
- * @throws Error.
+ * Generates character data for a bitmap font.
+ * @param {HTMLCanvasElement} canvas - The canvas to render characters on.
+ * @param {CanvasRenderingContext2D} context - The canvas rendering context.
+ * @param {import('../typedef.js').BitmapFontConfig} config - The bitmap font configuration.
+ * @param {import('../typedef.js').FontStyle} style - The font style to use.
+ * @param {import('../typedef.js').FontData} fontData - The font data to populate with character information.
+ * @param {string[]} charList - The list of characters to generate data for.
+ * @throws {Error} If the texture height is too small for the font.
  */
 export const generateChars = (canvas, context, config, style, fontData, charList) => {
   const resolution = config.resolution;

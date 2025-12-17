@@ -1,8 +1,8 @@
 /**
- * TBD.
- * @param {CanvasRenderingContext2D} context - TBD.
- * @param {import('../typedef.js').FontData} fontData - TBD.
- * @param {string[]} charList - TBD.
+ * Generates kerning data for a set of characters.
+ * @param {CanvasRenderingContext2D} context - The canvas rendering context.
+ * @param {import('../typedef.js').FontData} fontData - The font data to populate with kerning information.
+ * @param {string[]} charList - The list of characters to generate kerning for.
  */
 export const generateKernings = (context, fontData, charList) => {
   for (let i = 0, len = charList.length; i < len; i++) {

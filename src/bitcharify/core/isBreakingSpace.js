@@ -17,9 +17,9 @@ const BREAKING_SPACES = [
 ];
 
 /**
- * TBD.
- * @param {string} char - TBD.
- * @returns {boolean} TBD.
+ * Checks if a character is a breaking space.
+ * @param {string} char - The character to check.
+ * @returns {boolean} True if the character is a breaking space, false otherwise.
  */
 export const isBreakingSpace = (char) => {
   if (typeof char !== 'string') {

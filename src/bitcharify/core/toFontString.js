@@ -1,7 +1,7 @@
 /**
- * TBD.
- * @param {import('../typedef.js').FontStyle} style - TBD.
- * @returns {string} TBD.
+ * Converts a font style to a CSS font string.
+ * @param {import('../typedef.js').FontStyle} style - The font style to convert.
+ * @returns {string} The CSS font string representation.
  */
 export const toFontString = (style) => {
   const fontSizeString = typeof style.fontSize === 'number' ? `${style.fontSize}px` : style.fontSize;
