@@ -48,7 +48,7 @@
     "check": "pnpm lint && pnpm test && pnpm typecheck",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "test": "vitest --coverage --pass-with-no-tests",
+    "test": "vitest --coverage",
     "typecheck": "tsc"
   },
   "browserslist": [
