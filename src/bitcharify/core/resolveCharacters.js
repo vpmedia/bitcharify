@@ -2,7 +2,7 @@
  * Resolves character arrays to a flat array of characters.
  * @param {(string|string[])[]} chars - The character arrays to resolve.
  * @returns {string[]} The resolved flat array of characters.
- * @throws {Error} TBD.
+ * @throws {Error} Throws an error if a character range is invalid or empty set is found.
  */
 export const resolveCharacters = (chars) => {
   if (typeof chars === 'string') {

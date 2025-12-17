@@ -8,11 +8,11 @@ const BASELINE_MULTIPLIER = 1.4;
 const HEIGHT_MULTIPLIER = 2.0;
 
 /**
- * TBD.
- * @param {string} text - TBD.
- * @param {number} letterSpacing - TBD.
- * @param {CanvasRenderingContext2D} context - TBD.
- * @returns {number} TBD.
+ * Measures the width of text with letter spacing applied.
+ * @param {string} text - The text to measure.
+ * @param {number} letterSpacing - The letter spacing in pixels.
+ * @param {CanvasRenderingContext2D} context - The canvas 2d rendering context to use for measurement.
+ * @returns {number} The measured width of the text in pixels.
  */
 function _measureText(text, letterSpacing, context) {
   let width = context.measureText(text).width;
@@ -23,9 +23,9 @@ function _measureText(text, letterSpacing, context) {
 }
 
 /**
- * TBD.
- * @param {string} font - TBD.
- * @returns {import('../typedef.js').FontProperties} TBD.
+ * Measures font properties by creating a test canvas and measuring a sample string.
+ * @param {string} font - The CSS font string to measure properties for.
+ * @returns {import('../typedef.js').FontProperties} The measured font properties (ascent, descent, fontSize).
  */
 function _measureFont(font) {
   if (!window.__BITCHARIFY_CANVAS__) {
@@ -58,9 +58,9 @@ function _measureFont(font) {
 }
 
 /**
- * TBD.
- * @param {string} font - TBD.
- * @returns {import('../typedef.js').FontProperties} TBD.
+ * Fallback method to measure font properties when the primary method fails.
+ * @param {string} font - The CSS font string to measure properties for.
+ * @returns {import('../typedef.js').FontProperties} The measured font properties (ascent, descent, fontSize).
  */
 function _measureFontFallback(font) {
   const properties = {
@@ -149,11 +149,11 @@ function _measureFontFallback(font) {
 }
 
 /**
- * TBD.
- * @param {string} text - TBD.
- * @param {import('../typedef.js').FontStyle} style - TBD.
- * @param {HTMLCanvasElement} canvas - TBD.
- * @returns {string} TBD.
+ * Applies word wrapping to text based on the font style configuration.
+ * @param {string} text - The text to wrap.
+ * @param {import('../typedef.js').FontStyle} style - The font style configuration to use for word wrapping.
+ * @param {HTMLCanvasElement} canvas - The canvas element to use for measurements.
+ * @returns {string} The word-wrapped text.
  */
 function _wordWrap(text, style, canvas) {
   console.log(text, style, canvas);
@@ -161,12 +161,12 @@ function _wordWrap(text, style, canvas) {
 }
 
 /**
- * TBD.
- * @param {string} text - TBD.
- * @param {import('../typedef.js').FontStyle} style - TBD.
- * @param {boolean} wordWrap - TBD.
- * @param {HTMLCanvasElement} canvas - TBD.
- * @returns {import('../typedef.js').TextMetrics} TBD.
+ * Measures text and calculates its metrics including width, height, lines, and more.
+ * @param {string} text - The text to measure.
+ * @param {import('../typedef.js').FontStyle} style - The font style configuration to use for measurement.
+ * @param {boolean} wordWrap - Whether to enable word wrapping.
+ * @param {HTMLCanvasElement} canvas - The canvas element to use for measurements.
+ * @returns {import('../typedef.js').TextMetrics} The calculated text metrics.
  */
 export const measureText = (text, style, wordWrap, canvas) => {
   wordWrap = wordWrap === undefined || wordWrap === null ? style.wordWrap : wordWrap;
