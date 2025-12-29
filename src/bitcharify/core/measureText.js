@@ -5,7 +5,7 @@ import { toFontString } from './toFontString.js';
 const METRICS_STRING = '|ÉqÅ';
 const BASELINE_SYMBOL = 'M';
 const BASELINE_MULTIPLIER = 1.4;
-const HEIGHT_MULTIPLIER = 2.0;
+const HEIGHT_MULTIPLIER = 2;
 
 /**
  * Measures the width of text with letter spacing applied.

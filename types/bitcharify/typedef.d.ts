@@ -134,6 +134,14 @@ export type FontData = {
      * - The distance field data for the font.
      */
     distanceField: number[];
+    /**
+     * - Font X spacing.
+     */
+    xSpacing?: number;
+    /**
+     * - Font Y spacing.
+     */
+    ySpacing?: number;
 };
 export type TextMetrics = {
     /**
