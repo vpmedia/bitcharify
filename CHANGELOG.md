@@ -1,3 +1,19 @@
+## [1.21.0] - 2025-12-29
+
+### 💼 Other
+
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- Improve type checking
+- *(release)* V1.21.0
 ## [1.20.0] - 2025-12-17
 
 ### 💼 Other
