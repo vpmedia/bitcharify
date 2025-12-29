@@ -1,3 +1,13 @@
+## [1.22.0] - 2025-12-29
+
+### 💼 Other
+
+- *(deps)* Bumped package versions
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- *(release)* V1.22.0
 ## [1.21.0] - 2025-12-29
 
 ### 💼 Other
