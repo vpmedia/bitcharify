@@ -58,6 +58,6 @@
     "iOS >= 14"
   ],
   "dependencies": {
-    "@types/node": "^25.0.6"
+    "@types/node": "^25.0.7"
   }
 }
