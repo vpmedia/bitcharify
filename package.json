@@ -52,6 +52,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@types/node": "^25.0.9"
+    "@types/node": "^25.0.10"
   }
 }
