@@ -37,7 +37,7 @@
     "globals": "^17.2.0",
     "jsdom": "^27.4.0",
     "oxlint": "^1.42.0",
-    "oxlint-tsgolint": "^0.11.2",
+    "oxlint-tsgolint": "^0.11.3",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0",
@@ -52,6 +52,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@types/node": "^25.0.10"
+    "@types/node": "^25.1.0"
   }
 }
