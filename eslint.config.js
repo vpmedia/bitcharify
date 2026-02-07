@@ -52,6 +52,7 @@ export default defineConfig([
       ...jsdocPlugin.configs['flat/recommended-typescript-flavor'].rules,
       ...unicornPlugin.configs.recommended.rules,
       'no-unused-vars': 'off',
+      'no-useless-assignment': 'warn',
       'unicorn/better-regex': 'warn',
       'unicorn/catch-error-name': 'warn',
       'unicorn/filename-case': 'off',
