@@ -52,6 +52,7 @@
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-rest-spread-properties": "off",
+    "no-shadow": "warn",
     "no-ternary": "off",
     "no-undefined": "off",
     "no-unused-vars": "off",
