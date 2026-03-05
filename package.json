@@ -26,8 +26,8 @@
   "types": "./types/index.d.ts",
   "type": "module",
   "devDependencies": {
-    "@commitlint/cli": "^20.4.2",
-    "@commitlint/config-conventional": "^20.4.2",
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
     "@vitest/coverage-v8": "^4.0.18",
     "jsdom": "^28.1.0",
     "oxfmt": "^0.36.0",
