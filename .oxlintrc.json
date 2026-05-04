@@ -45,6 +45,7 @@
     "no-shadow": "warn",
     "no-ternary": "off",
     "no-undefined": "off",
+    "no-underscore-dangle": "off",
     "no-unused-vars": "off",
     "no-useless-undefined": "off",
     "no-warning-comments": "off",

@@ -1,0 +1,2 @@
+export function drawGlyph(canvas: HTMLCanvasElement, context: CanvasRenderingContext2D, metrics: import("../typedef.js").TextMetrics, x: number, y: number, resolution: number, style: import("../typedef.js").FontStyle): void;
+//# sourceMappingURL=drawGlyph.d.ts.map

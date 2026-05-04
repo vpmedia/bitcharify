@@ -1,0 +1,2 @@
+export function getTextMetrics(text: string, style: import("../typedef.js").FontStyle, width: number, height: number, lines: string[], lineWidths: number[], lineHeight: number, maxLineWidth: number, fontProperties: import("../typedef.js").FontProperties): import("../typedef.js").TextMetrics;
+//# sourceMappingURL=getTextMetrics.d.ts.map
