@@ -1,2 +1,0 @@
-export function generateBitmapFont(canvas: HTMLCanvasElement, style: import("./typedef.js").FontStyle, options?: import("./typedef.js").BitmapFontConfig): import("./typedef.js").FontData;
-//# sourceMappingURL=generateBitmapFont.d.ts.map
