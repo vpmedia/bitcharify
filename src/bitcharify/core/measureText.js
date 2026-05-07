@@ -119,10 +119,10 @@ function _measureFontFallback(font) {
         break;
       }
     }
-    if (!stop) {
-      idx += line;
-    } else {
+    if (stop) {
       break;
+    } else {
+      idx += line;
     }
   }
   properties.ascent = baseline - i;
@@ -137,10 +137,10 @@ function _measureFontFallback(font) {
         break;
       }
     }
-    if (!stop) {
-      idx -= line;
-    } else {
+    if (stop) {
       break;
+    } else {
+      idx -= line;
     }
   }
   properties.descent = i - baseline;
@@ -185,7 +185,7 @@ export const measureText = (text, style, wordWrap, canvas) => {
   const context = canvas.getContext('2d', { willReadFrequently: true });
   context.font = font;
   const outputText = wordWrap ? _wordWrap(text, style, canvas) : text;
-  const lines = outputText.split(/(?:\r\n|\r|\n)/);
+  const lines = outputText.split(/(?:\r\n|\r|\n)/u);
   const lineWidths = new Array(lines.length);
   let maxLineWidth = 0;
   for (let i = 0; i < lines.length; i++) {

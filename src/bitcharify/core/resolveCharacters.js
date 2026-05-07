@@ -20,11 +20,11 @@ export const resolveCharacters = (chars) => {
       if (endCode < startCode) {
         throw new Error('Invalid character range.');
       }
-      for (let i = startCode, j = endCode; i <= j; i++) {
-        result.push(String.fromCharCode(i));
+      for (let code = startCode, end = endCode; code <= end; code++) {
+        result.push(String.fromCharCode(code));
       }
     } else {
-      result.push(...Array.from(item));
+      result.push(...item);
     }
   }
   if (result.length === 0) {

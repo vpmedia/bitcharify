@@ -16,15 +16,15 @@ export const generateBitmapFont = (canvas, style, options = {}) => {
   const defaultConfig = getConfig();
   const config = { ...defaultConfig, ...options };
   // normalize style
-  style.strokeThickness = style.strokeThickness || 0;
-  style.fontStyle = style.fontStyle || 'normal';
-  style.fontVariant = style.fontVariant || 'normal';
-  style.fontWeight = style.fontWeight || 'normal';
-  style.leading = style.leading || 0;
-  style.letterSpacing = style.letterSpacing || 0;
-  style.lineHeight = style.lineHeight || 0;
-  style.miterLimit = style.miterLimit || 10;
-  style.padding = style.padding || 0;
+  style.strokeThickness ||= 0;
+  style.fontStyle ||= 'normal';
+  style.fontVariant ||= 'normal';
+  style.fontWeight ||= 'normal';
+  style.leading ||= 0;
+  style.letterSpacing ||= 0;
+  style.lineHeight ||= 0;
+  style.miterLimit ||= 10;
+  style.padding ||= 0;
   // init canvas
   canvas.width = config.width;
   canvas.height = config.height;
