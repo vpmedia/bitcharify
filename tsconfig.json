@@ -1,25 +1,22 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "jsx": "react-jsx",
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "types": ["node", "vitest/globals"],
-    "allowJs": true,
-    "checkJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "declarationDir": "./types",
-    "rootDir": "./src",
+    "sourceMap": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
     "skipLibCheck": true
   },
   "include": ["./src/**/*", "./typedefs/**/*"],
-  "exclude": ["./src/**/*.test.js"]
+  "exclude": ["./src/**/*.test.ts", "./dist", "./node_modules"]
 }

@@ -1,2 +1,0 @@
-export function generateChars(canvas: HTMLCanvasElement, context: CanvasRenderingContext2D, config: import("../typedef.js").BitmapFontConfig, style: import("../typedef.js").FontStyle, fontData: import("../typedef.js").FontData, charList: string[]): void;
-//# sourceMappingURL=generateChars.d.ts.map
