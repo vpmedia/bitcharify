@@ -1,3 +1,90 @@
+## [1.24.0] - 2026-05-10
+
+### 🐛 Bug Fixes
+
+- Fixed ts6 compat issues
+- Resolve lint errors
+
+### 💼 Other
+
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Update cli scripts
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+
+### 🚜 Refactor
+
+- Migrate to strict TypeScript
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- Set eslint rule to warn level
+- Drop eslint, use oxlint only
+- Use oxlint only
+- Only audit production package
+- Migrate from prettier to oxfmt
+- *(deps)* Bump slack github action to v3
+- *(deps)* Update pnpm/action-setup to v5
+- *(security)* Set pnpm minimum release age to 1 day
+- *(security)* Pin github actions to immutable releases
+- *(ai)* Added CLAUDE.md
+- *(deps)* Bumped dependency versions
+- *(deps)* Update pnpm action setup
+- Revert to pnpm action setup v5
+- Supress lint errors
+- Use pnpm v10
+- Fix failing publish workflow
+- *(release)* V1.24.0
 ## [1.23.0] - 2026-02-05
 
 ### 💼 Other
