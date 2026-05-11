@@ -1,3 +1,14 @@
+## [1.25.0] - 2026-05-11
+
+### 💼 Other
+
+- Migrate to rolldown bundler and unify strict tsconfig
+- Regenerate lockfile
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- *(release)* V1.25.0
 ## [1.24.0] - 2026-05-10
 
 ### 🐛 Bug Fixes
