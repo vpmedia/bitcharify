@@ -3,7 +3,7 @@ import { toFontString } from './toFontString.js';
 
 // Draws a glyph on the canvas.
 export const drawGlyph = (
-  canvas: HTMLCanvasElement,
+  _canvas: HTMLCanvasElement,
   context: CanvasRenderingContext2D,
   metrics: TextMetrics,
   x: number,

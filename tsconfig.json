@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "types": ["node", "vitest/globals"],
@@ -12,11 +13,27 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+
     "strict": true,
-    "strictNullChecks": true,
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "useUnknownInCatchVariables": true,
+
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false
   },
-  "include": ["./src/**/*", "./typedefs/**/*"],
-  "exclude": ["./src/**/*.test.ts", "./dist", "./node_modules"]
+  "include": ["./src/**/*", "./typedefs/**/*.d.ts"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "./dist", "./node_modules"]
 }

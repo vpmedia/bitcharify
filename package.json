@@ -42,11 +42,12 @@
     "oxfmt": "^0.48.0",
     "oxlint": "^1.63.0",
     "oxlint-tsgolint": "^0.22.1",
+    "rolldown": "^1.0.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "rm -rf dist && rolldown -c && tsc -p tsconfig.json --emitDeclarationOnly",
     "check": "pnpm lint && pnpm test && pnpm typecheck",
     "format": "oxfmt --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
     "lint": "oxlint src",
