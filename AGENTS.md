@@ -10,7 +10,7 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 - **Runtime:** Node.js
 - **Package Manager:** pnpm (workspaces)
 - **Build:** Rolldown + `tsc --emitDeclarationOnly`
-- **Testing:** Vitest, @vitest/coverage-v8, jsdom
+- **Testing:** Vitest, @vitest/coverage-v8, happy-dom
 - **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
 - **Type Checking:** TypeScript
 - **Tooling:** lefthook (git hooks), commitlint (conventional commits)
@@ -21,6 +21,7 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 - OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
 - Phaser 3: https://context7.com/phaserjs/phaser/llms.txt
 - Rolldown: https://rolldown.rs/llms.txt
+- TypeScript: https://context7.com/websites/typescriptlang/llms.txt
 - Vitest: https://vitest.dev/llms.txt
 
 ## Commands
@@ -52,4 +53,4 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 
 - Tests are co-located with source as `*.test.ts` under `src/`
 - Run a single file: `pnpm test src/bitcharify/core/toFontString.test.ts`
-- DOM APIs available via jsdom environment
+- DOM APIs available via happy-dom environment
