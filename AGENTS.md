@@ -21,7 +21,6 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 - OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
 - Phaser 3: https://context7.com/phaserjs/phaser/llms.txt
 - Rolldown: https://rolldown.rs/llms.txt
-- TypeScript: https://www.typescriptlang.org/llms.txt
 - Vitest: https://vitest.dev/llms.txt
 
 ## Commands
