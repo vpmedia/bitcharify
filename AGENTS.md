@@ -9,7 +9,6 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 - **Language:** TypeScript (ESM, `"type": "module"`)
 - **Runtime:** Node.js
 - **Package Manager:** pnpm (workspaces)
-- **Domain:** Bitmap font generator (Phaser v2 / v3 compatible)
 - **Build:** Rolldown + `tsc --emitDeclarationOnly`
 - **Testing:** Vitest, @vitest/coverage-v8, jsdom
 - **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
