@@ -1,11 +1,7 @@
 import type { FontData } from '../typedef.js';
 
 // Generates kerning data for a set of characters.
-export const generateKernings = (
-  context: CanvasRenderingContext2D,
-  fontData: FontData,
-  charList: string[]
-): void => {
+export const generateKernings = (context: CanvasRenderingContext2D, fontData: FontData, charList: string[]): void => {
   for (let i = 0, len = charList.length; i < len; i++) {
     const first = charList[i];
     for (let j = 0; j < len; j++) {
