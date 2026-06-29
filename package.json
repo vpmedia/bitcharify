@@ -37,6 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.1.0",
     "@commitlint/config-conventional": "^21.1.0",
+    "@types/node": "^26.0.1",
     "@vitest/coverage-v8": "^4.1.9",
     "happy-dom": "^20.10.6",
     "oxfmt": "^0.56.0",
@@ -53,8 +54,5 @@
     "lint": "oxlint src",
     "test": "vitest --coverage",
     "typecheck": "tsc"
-  },
-  "dependencies": {
-    "@types/node": "^25.9.4"
   }
 }
