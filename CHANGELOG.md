@@ -1,3 +1,36 @@
+## [1.26.0] - 2026-07-07
+
+### 💼 Other
+
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+- *(deps)* Bump dependency versions
+
+### 📚 Documentation
+
+- Expand AGENTS.md with overview, tech stack, and project guide
+- *(agents)* Add Documentation section with llms.txt links
+- *(agents)* Standardize structure and commit-config wording
+- *(agents)* Remove non-existent TypeScript llms.txt link
+- Refresh AGENTS.md
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- *(ai)* Add shared clean-code rules for Claude
+- *(lint)* Switch oxlint categories to error and disable current violations
+- Enable blockExoticSubdeps in pnpm workspace
+- Migrate from jsdom to happy-dom
+- Gitignore .claude/settings.local.json
+- Update dependencies
+- Pin GitHub Actions to commit SHAs and upgrade to latest
+- *(release)* V1.26.0
 ## [1.25.0] - 2026-05-11
 
 ### 💼 Other
