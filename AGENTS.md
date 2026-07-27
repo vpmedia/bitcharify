@@ -6,14 +6,7 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 
 ## Tech Stack
 
-- **Language:** TypeScript (ESM, `"type": "module"`)
-- **Runtime:** Node.js
-- **Package Manager:** pnpm (workspaces)
-- **Build:** Rolldown + `tsc --emitDeclarationOnly`
-- **Testing:** Vitest, @vitest/coverage-v8, happy-dom
-- **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
-- **Type Checking:** TypeScript
-- **Tooling:** lefthook (git hooks), commitlint (conventional commits)
+Read [package.json](package.json) for the language, runtime, dependencies and tooling.
 
 ## Documentation
 
@@ -33,15 +26,6 @@ A bitmap font generator targeting the Phaser game engine (v2 and v3 via separate
 - **Format:** `pnpm format`
 - **Typecheck:** `pnpm typecheck`
 - **All checks:** `pnpm check` (lint + test + typecheck)
-
-## Project Structure
-
-- `src/index.ts` — public entry point
-- `src/bitcharify/` — implementation modules
-- `typedefs/` — ambient type declarations
-- `dist/` — build output (gitignored)
-- `docs/` — documentation
-- `rolldown.config.ts`, `vitest.config.ts`, `tsconfig.json` — tool configs
 
 ## Conventions
 
