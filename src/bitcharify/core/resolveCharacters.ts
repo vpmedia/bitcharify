@@ -3,14 +3,14 @@
 export const resolveCharacters = (chars: string | (string | string[])[]): string[] => {
   const list: (string | string[])[] = typeof chars === 'string' ? [chars] : chars;
   const result: string[] = [];
-  for (let i = 0, j = list.length; i < j; i++) {
-    const item = list[i];
+  for (const item of list) {
     if (Array.isArray(item)) {
-      if (item.length !== 2) {
+      const [startChar, endChar] = item;
+      if (item.length !== 2 || startChar === undefined || endChar === undefined) {
         throw new Error(`Invalid character range length, expecting 2 got ${item.length}.`);
       }
-      const startCode = item[0].charCodeAt(0);
-      const endCode = item[1].charCodeAt(0);
+      const startCode = startChar.charCodeAt(0);
+      const endCode = endChar.charCodeAt(0);
       if (endCode < startCode) {
         throw new Error('Invalid character range.');
       }

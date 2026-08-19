@@ -9,7 +9,7 @@ export const tokenize = (text: unknown): string[] => {
     return tokens;
   }
   for (let i = 0; i < text.length; i++) {
-    const char = text[i];
+    const char = text.charAt(i);
     if (isBreakingSpace(char) || isNewline(char)) {
       if (token !== '') {
         tokens.push(token);

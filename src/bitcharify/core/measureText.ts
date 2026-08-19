@@ -95,7 +95,8 @@ function _measureFontFallback(font: string): FontProperties {
   for (i = 0; i < baseline; ++i) {
     for (let j = 0; j < line; j += 4) {
       // issue: firefox returns 253 and not 255 for the red pixel value
-      if (imagedata[idx + j] < 253) {
+      const red = imagedata[idx + j];
+      if (red !== undefined && red < 253) {
         stop = true;
         break;
       }
@@ -113,7 +114,8 @@ function _measureFontFallback(font: string): FontProperties {
   for (i = height; i > baseline; --i) {
     for (let j = 0; j < line; j += 4) {
       // issue: firefox returns 253 and not 255 for the red pixel value
-      if (imagedata[idx + j] < 253) {
+      const red = imagedata[idx + j];
+      if (red !== undefined && red < 253) {
         stop = true;
         break;
       }
@@ -162,13 +164,8 @@ export const measureText = (
   context.font = font;
   const outputText = useWordWrap ? _wordWrap(text, style, canvas) : text;
   const lines = outputText.split(/(?:\r\n|\r|\n)/u);
-  const lineWidths: number[] = new Array(lines.length);
-  let maxLineWidth = 0;
-  for (let i = 0; i < lines.length; i++) {
-    const lineWidth = _measureText(lines[i], style.letterSpacing, context);
-    lineWidths[i] = lineWidth;
-    maxLineWidth = Math.max(maxLineWidth, lineWidth);
-  }
+  const lineWidths = lines.map((line) => _measureText(line, style.letterSpacing, context));
+  const maxLineWidth = Math.max(0, ...lineWidths);
   let width = maxLineWidth + style.strokeThickness;
   if (style.dropShadow) {
     width += style.dropShadowDistance ?? 0;

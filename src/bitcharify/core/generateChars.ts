@@ -23,6 +23,9 @@ export const generateChars = (
   for (let i = 0; i < charList.length; i++) {
     // Measure glyph dimensions
     const character = charList[i];
+    if (character === undefined) {
+      continue;
+    }
     const metrics = measureText(character, style, false, canvas);
     const width = metrics.width;
     const height = Math.ceil(metrics.height);

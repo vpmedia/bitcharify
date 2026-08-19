@@ -32,7 +32,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnusedLabels": false,
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true
   },
   "include": ["./src/**/*", "./typedefs/**/*.d.ts"],
   "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "./dist", "./node_modules"]
