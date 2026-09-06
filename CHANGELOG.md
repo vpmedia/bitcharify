@@ -1,3 +1,13 @@
+## [1.28.0] - 2026-09-06
+
+### 🚀 Features
+
+- *(lint)* Enable type-aware oxlint
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- *(release)* V1.28.0
 ## [1.27.0] - 2026-08-19
 
 ### 🚀 Features
