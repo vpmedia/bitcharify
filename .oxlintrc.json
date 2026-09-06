@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "env": { "browser": true },
+  "env": {
+    "browser": true
+  },
   "plugins": ["eslint", "jsx-a11y", "oxc", "promise", "react-perf", "react", "typescript", "unicorn"],
   "categories": {
     "correctness": "error",
@@ -16,6 +18,10 @@
     "capitalized-comments": "off",
     "func-style": "off",
     "id-length": "off",
+    "import/group-exports": "off",
+    "import/no-default-export": "off",
+    "import/no-named-export": "off",
+    "import/prefer-default-export": "off",
     "init-declarations": "off",
     "max-lines": "off",
     "max-lines-per-function": "off",
@@ -37,19 +43,27 @@
     "no-unused-vars": "off",
     "no-warning-comments": "off",
     "one-var": "off",
-    "prefer-destructuring": "off",
-    "sort-imports": "off",
-    "sort-keys": "off",
-    "import/group-exports": "off",
-    "import/no-default-export": "off",
-    "import/no-named-export": "off",
-    "import/prefer-default-export": "off",
     "oxc/no-optional-chaining": "off",
     "oxc/no-rest-spread-properties": "off",
+    "prefer-destructuring": "off",
     "promise/avoid-new": "off",
+    "sort-imports": "off",
+    "sort-keys": "off",
     "typescript/consistent-type-definitions": "off",
     "typescript/consistent-type-imports": "off",
+    "typescript/no-non-null-assertion": "off",
+    "typescript/no-unsafe-type-assertion": "off",
     "typescript/prefer-for-of": "off",
+    "typescript/prefer-readonly-parameter-types": "off",
+    "typescript/promise-function-async": "off",
+    "typescript/require-await": "off",
+    "typescript/strict-boolean-expressions": [
+      "error",
+      {
+        "allowNullableBoolean": true,
+        "allowNullableString": true
+      }
+    ],
     "unicorn/catch-error-name": "off",
     "unicorn/filename-case": "off",
     "unicorn/no-new-array": "off",
@@ -64,5 +78,8 @@
     "unicorn/prefer-set-has": "off",
     "unicorn/prefer-spread": "off",
     "unicorn/require-module-specifiers": "off"
+  },
+  "options": {
+    "typeAware": true
   }
 }

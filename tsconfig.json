@@ -5,11 +5,8 @@
     "module": "NodeNext",
     "moduleResolution": "nodenext",
     "types": ["node", "vitest/globals"],
-    "outDir": "./dist",
     "rootDir": "./src",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+    "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -37,5 +34,5 @@
     "noUncheckedIndexedAccess": true
   },
   "include": ["./src/**/*", "./typedefs/**/*.d.ts"],
-  "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "./dist", "./node_modules"]
+  "exclude": ["./dist", "./node_modules"]
 }

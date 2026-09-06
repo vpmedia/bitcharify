@@ -19,7 +19,7 @@ export const loadImage = (url: string): Promise<Event> => {
     };
     handlers.error = (event: Event): void => {
       cleanup();
-      reject(event);
+      reject(new Error(`Image failed to load: ${url}`, { cause: event }));
     };
     image.addEventListener('load', handlers.load);
     image.addEventListener('error', handlers.error);

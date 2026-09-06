@@ -20,34 +20,42 @@ function _measureText(text: string, letterSpacing: number, context: AnyCanvas2dC
   return width;
 }
 
-function _ensureMeasureCanvas(): void {
-  if (!window.__BITCHARIFY_CANVAS__) {
-    let canvas: AnyCanvas | undefined;
-    let context: AnyCanvas2dContext | null | undefined;
-    try {
-      canvas = new OffscreenCanvas(0, 0);
-      context = canvas.getContext('2d', { willReadFrequently: true }) as OffscreenCanvasRenderingContext2D | null;
-    } catch {
-      // pass
-    }
-    if (!canvas || !context?.measureText) {
-      canvas = document.createElement('canvas');
-      context = canvas.getContext('2d', { willReadFrequently: true });
-    }
-    if (!context) {
-      throw new Error('Unable to get a 2D rendering context.');
-    }
-    canvas.width = 10;
-    canvas.height = 10;
-    window.__BITCHARIFY_CANVAS__ = canvas;
-    window.__BITCHARIFY_CONTEXT__ = context;
+interface MeasureSurface {
+  canvas: AnyCanvas;
+  context: AnyCanvas2dContext;
+}
+
+function _ensureMeasureCanvas(): MeasureSurface {
+  const cachedCanvas = window.__BITCHARIFY_CANVAS__;
+  const cachedContext = window.__BITCHARIFY_CONTEXT__;
+  if (cachedCanvas && cachedContext) {
+    return { canvas: cachedCanvas, context: cachedContext };
   }
+  let canvas: AnyCanvas | undefined;
+  let context: AnyCanvas2dContext | null | undefined;
+  try {
+    canvas = new OffscreenCanvas(0, 0);
+    context = canvas.getContext('2d', { willReadFrequently: true });
+  } catch {
+    // pass
+  }
+  if (!canvas || !context?.measureText) {
+    canvas = document.createElement('canvas');
+    context = canvas.getContext('2d', { willReadFrequently: true });
+  }
+  if (!context) {
+    throw new Error('Unable to get a 2D rendering context.');
+  }
+  canvas.width = 10;
+  canvas.height = 10;
+  window.__BITCHARIFY_CANVAS__ = canvas;
+  window.__BITCHARIFY_CONTEXT__ = context;
+  return { canvas, context };
 }
 
 // Measures font properties by creating a test canvas and measuring a sample string.
 function _measureFont(font: string): FontProperties {
-  _ensureMeasureCanvas();
-  const context = window.__BITCHARIFY_CONTEXT__;
+  const { context } = _ensureMeasureCanvas();
   context.font = font;
   const metrics = context.measureText(METRICS_STRING + BASELINE_SYMBOL);
   const properties: FontProperties = {
@@ -65,9 +73,7 @@ function _measureFontFallback(font: string): FontProperties {
     descent: 0,
     fontSize: 0,
   };
-  _ensureMeasureCanvas();
-  const canvas = window.__BITCHARIFY_CANVAS__;
-  const context = window.__BITCHARIFY_CONTEXT__;
+  const { canvas, context } = _ensureMeasureCanvas();
   context.font = font;
   const metricsString = METRICS_STRING + BASELINE_SYMBOL;
   const width = Math.ceil(context.measureText(metricsString).width);
@@ -144,7 +150,7 @@ export const measureText = (
   wordWrap: boolean | undefined | null,
   canvas: HTMLCanvasElement
 ): TextMetrics => {
-  const useWordWrap = wordWrap === undefined || wordWrap === null ? Boolean(style.wordWrap) : wordWrap;
+  const useWordWrap = wordWrap ?? Boolean(style.wordWrap);
   const font = toFontString(style);
   let fontProperties = _measureFont(font);
   if (!fontProperties.fontSize) {

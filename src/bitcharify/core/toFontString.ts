@@ -1,6 +1,9 @@
 import type { FontStyle } from '../typedef.js';
 
-export type FontStringStyle = Pick<FontStyle, 'fontStyle' | 'fontVariant' | 'fontWeight' | 'fontSize' | 'fontFamily'>;
+export type FontStringStyle = Pick<FontStyle, 'fontStyle' | 'fontVariant' | 'fontWeight' | 'fontFamily'> & {
+  /** Pixels, or a CSS length the caller has already written out. */
+  fontSize: number | string;
+};
 
 // Converts a font style to a CSS font string.
 export const toFontString = (style: FontStringStyle): string => {

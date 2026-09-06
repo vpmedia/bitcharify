@@ -18,6 +18,7 @@ export const resolveCharacters = (chars: string | (string | string[])[]): string
         result.push(String.fromCharCode(code));
       }
     } else {
+      // oxlint-disable-next-line typescript/no-misused-spread -- one code point per glyph, matching the charCodeAt range branch above
       result.push(...item);
     }
   }
