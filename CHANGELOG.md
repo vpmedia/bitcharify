@@ -1,3 +1,17 @@
+## [1.29.0] - 2026-09-06
+
+### 🚀 Features
+
+- [**breaking**] Cover the generator and drop the word wrap stub
+
+### 🚜 Refactor
+
+- Drop the TYPE_CHECKING constant
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
+- *(release)* V1.29.0
 ## [1.28.0] - 2026-09-06
 
 ### 🚀 Features
