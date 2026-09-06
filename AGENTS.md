@@ -39,6 +39,21 @@ Read [package.json](package.json) for the language, runtime, dependencies and to
 - Run a single file: `pnpm test src/bitcharify/core/toFontString.test.ts`
 - DOM APIs available via happy-dom environment
 
+happy-dom ships no canvas, and this package is nothing but canvas work, so
+`installCanvasContext2D()` from `src/testing/canvas.ts` supplies a deterministic 2D context: a
+character is eight pixels wide at a 16px font, the ascent is four fifths of the font size and the
+descent the remaining fifth. Every expected number in the generator tests is derived from those
+ratios, so changing the fixture rewrites the suite. `src/testing/` is excluded from
+`tsconfig.build.json`, and nothing `src/index.ts` reaches imports it, so it stays out of `dist/`.
+
+`measureText` caches its measuring surface in module scope and prefers an `OffscreenCanvas`. A test
+that needs different metrics stubs `OffscreenCanvas` and re-imports the module through
+`vi.resetModules()`; happy-dom's own `OffscreenCanvas` returns no 2D context, so the unstubbed path
+falls through to `document.createElement('canvas')`.
+
+`vitest.config.ts` carries a `coverage.thresholds` block set just under where the suite stands.
+Re-base the numbers when coverage genuinely moves; never lower one to turn a red run green.
+
 ## Reference Documentation
 
 Read on demand:

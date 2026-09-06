@@ -1,8 +1,8 @@
 type ImageHandler = (event: Event) => void;
 
 // Loads an image from a URL.
-export const loadImage = (url: string): Promise<Event> => {
-  return new Promise<Event>((resolve, reject) => {
+export const loadImage = (url: string): Promise<Event> =>
+  new Promise<Event>((resolve, reject) => {
     const image = new Image();
     const handlers: { load?: ImageHandler; error?: ImageHandler } = {};
     const cleanup = (): void => {
@@ -25,4 +25,3 @@ export const loadImage = (url: string): Promise<Event> => {
     image.addEventListener('error', handlers.error);
     image.src = url;
   });
-};

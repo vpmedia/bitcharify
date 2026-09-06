@@ -1,3 +1,5 @@
+import { graphemeSegmenter } from './graphemeSegmenter.js';
+
 // Resolves character arrays to a flat array of characters.
 // Throws an error if a character range is invalid or empty set is found.
 export const resolveCharacters = (chars: string | (string | string[])[]): string[] => {
@@ -9,17 +11,16 @@ export const resolveCharacters = (chars: string | (string | string[])[]): string
       if (item.length !== 2 || startChar === undefined || endChar === undefined) {
         throw new Error(`Invalid character range length, expecting 2 got ${item.length}.`);
       }
-      const startCode = startChar.charCodeAt(0);
-      const endCode = endChar.charCodeAt(0);
-      if (endCode < startCode) {
+      const startCode = startChar.codePointAt(0);
+      const endCode = endChar.codePointAt(0);
+      if (startCode === undefined || endCode === undefined || endCode < startCode) {
         throw new Error('Invalid character range.');
       }
-      for (let code = startCode, end = endCode; code <= end; code++) {
-        result.push(String.fromCharCode(code));
+      for (let code = startCode; code <= endCode; code += 1) {
+        result.push(String.fromCodePoint(code));
       }
     } else {
-      // oxlint-disable-next-line typescript/no-misused-spread -- one code point per glyph, matching the charCodeAt range branch above
-      result.push(...item);
+      result.push(...graphemeSegmenter(item));
     }
   }
   if (result.length === 0) {

@@ -12,22 +12,22 @@ export const generateChars = (
   fontData: FontData,
   charList: string[]
 ): void => {
-  const resolution = config.resolution;
+  const { resolution } = config;
   const textureWidth = config.width;
   const textureHeight = config.height;
-  const padding = config.padding;
+  const { padding } = config;
   const lineWidth = textureWidth;
   let positionX = 0;
   let positionY = 0;
   let maxCharHeight = 0;
-  for (let i = 0; i < charList.length; i++) {
+  for (let i = 0; i < charList.length; i += 1) {
     // Measure glyph dimensions
     const character = charList[i];
     if (character === undefined) {
       continue;
     }
-    const metrics = measureText(character, style, false, canvas);
-    const width = metrics.width;
+    const metrics = measureText(character, style, canvas);
+    const { width } = metrics;
     const height = Math.ceil(metrics.height);
     // This is ugly - but italics are given more space so they don't overlap
     const textureGlyphWidth = Math.ceil((style.fontStyle === 'italic' ? 2 : 1) * width);
@@ -41,7 +41,7 @@ export const generateChars = (
     maxCharHeight = Math.max(height + metrics.fontProperties.descent, maxCharHeight);
     // Wrap line once full row has been rendered
     if (textureGlyphWidth * resolution + positionX >= lineWidth) {
-      --i;
+      i -= 1;
       positionY += maxCharHeight * resolution;
       positionY = Math.ceil(positionY);
       positionX = 0;

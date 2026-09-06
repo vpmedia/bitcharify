@@ -36,6 +36,6 @@
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["./src/**/*", "./typedefs/**/*.d.ts"],
-  "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "./dist", "./node_modules"]
+  "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.test.tsx", "./src/testing/**", "./dist", "./node_modules"]
 }

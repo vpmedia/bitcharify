@@ -11,16 +11,14 @@ export const getTextMetrics = (
   lineHeight: number,
   maxLineWidth: number,
   fontProperties: FontProperties
-): TextMetrics => {
-  return {
-    text,
-    style,
-    width,
-    height,
-    lines,
-    lineWidths,
-    lineHeight,
-    maxLineWidth,
-    fontProperties,
-  };
-};
+): TextMetrics => ({
+  text,
+  style,
+  width,
+  height,
+  lines,
+  lineWidths,
+  lineHeight,
+  maxLineWidth,
+  fontProperties,
+});

@@ -13,7 +13,7 @@ export const drawGlyph = (
 ): void => {
   // canvas is currently unused but kept for API parity with future fill-style generation
   const char = metrics.text;
-  const fontProperties = metrics.fontProperties;
+  const { fontProperties } = metrics;
   context.translate(x, y);
   context.scale(resolution, resolution);
   const tx = style.strokeThickness / 2;
@@ -27,8 +27,6 @@ export const drawGlyph = (
     context.lineJoin = style.lineJoin;
   }
   context.miterLimit = style.miterLimit;
-  // TODO
-  // context.fillStyle = generateFillStyle(canvas, context, style, resolution, [char], metrics);
   if (style.fill) {
     context.fillStyle = style.fill;
   }

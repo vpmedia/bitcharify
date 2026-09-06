@@ -1,5 +1,5 @@
 /** Cache of breaking spaces. */
-const BREAKING_SPACES: number[] = [
+const BREAKING_SPACES = new Set([
   0x0009, // character tabulation
   0x0020, // space
   0x2000, // en quad
@@ -14,12 +14,13 @@ const BREAKING_SPACES: number[] = [
   0x200a, // hair space
   0x205f, // medium mathematical space
   0x3000, // ideographic space
-];
+]);
 
 // Checks if a character is a breaking space.
 export const isBreakingSpace = (char: unknown): boolean => {
   if (typeof char !== 'string') {
     return false;
   }
-  return BREAKING_SPACES.includes(char.charCodeAt(0));
+  const codePoint = char.codePointAt(0);
+  return codePoint !== undefined && BREAKING_SPACES.has(codePoint);
 };

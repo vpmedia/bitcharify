@@ -29,8 +29,6 @@ export interface FontStyle {
   textBaseline?: CanvasTextBaseline;
   /** The line join style for strokes. */
   lineJoin?: CanvasLineJoin;
-  /** Whether to enable word wrapping. */
-  wordWrap?: boolean;
   /** The color of the drop shadow. */
   dropShadow?: string;
   /** The distance of the drop shadow in pixels. */

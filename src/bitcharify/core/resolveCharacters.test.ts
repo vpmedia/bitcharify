@@ -1,20 +1,21 @@
+import { expect, test, describe } from 'vitest';
 import { resolveCharacters } from './resolveCharacters.js';
 
 describe('resolveCharacters', () => {
   test('resolves single string to array of characters', () => {
-    expect(resolveCharacters('abc')).toEqual(['a', 'b', 'c']);
+    expect(resolveCharacters('abc')).toStrictEqual(['a', 'b', 'c']);
   });
 
   test('resolves array of strings to flat array of characters', () => {
-    expect(resolveCharacters(['abc', 'def'])).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
+    expect(resolveCharacters(['abc', 'def'])).toStrictEqual(['a', 'b', 'c', 'd', 'e', 'f']);
   });
 
   test('resolves character ranges', () => {
-    expect(resolveCharacters([['a', 'c']])).toEqual(['a', 'b', 'c']);
+    expect(resolveCharacters([['a', 'c']])).toStrictEqual(['a', 'b', 'c']);
   });
 
   test('resolves mixed strings and ranges', () => {
-    expect(resolveCharacters(['ab', ['c', 'e'], 'f'])).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
+    expect(resolveCharacters(['ab', ['c', 'e'], 'f'])).toStrictEqual(['a', 'b', 'c', 'd', 'e', 'f']);
   });
 
   test('handles empty string input', () => {
@@ -35,10 +36,10 @@ describe('resolveCharacters', () => {
   });
 
   test('handles single character range', () => {
-    expect(resolveCharacters([['x', 'x']])).toEqual(['x']);
+    expect(resolveCharacters([['x', 'x']])).toStrictEqual(['x']);
   });
 
   test('handles unicode characters in ranges', () => {
-    expect(resolveCharacters([['A', 'C']])).toEqual(['A', 'B', 'C']);
+    expect(resolveCharacters([['A', 'C']])).toStrictEqual(['A', 'B', 'C']);
   });
 });

@@ -13,7 +13,7 @@ const HEIGHT_MULTIPLIER = 2;
 
 // Measures the width of text with letter spacing applied.
 function _measureText(text: string, letterSpacing: number, context: AnyCanvas2dContext): number {
-  let width = context.measureText(text).width;
+  let { width } = context.measureText(text);
   if (width > 0) {
     width += (graphemeSegmenter(text).length - 1) * letterSpacing;
   }
@@ -25,11 +25,12 @@ interface MeasureSurface {
   context: AnyCanvas2dContext;
 }
 
+/** Built on first use and reused for every measurement after. */
+let measureSurface: MeasureSurface | null = null;
+
 function _ensureMeasureCanvas(): MeasureSurface {
-  const cachedCanvas = window.__BITCHARIFY_CANVAS__;
-  const cachedContext = window.__BITCHARIFY_CONTEXT__;
-  if (cachedCanvas && cachedContext) {
-    return { canvas: cachedCanvas, context: cachedContext };
+  if (measureSurface) {
+    return measureSurface;
   }
   let canvas: AnyCanvas | undefined;
   let context: AnyCanvas2dContext | null | undefined;
@@ -48,9 +49,8 @@ function _ensureMeasureCanvas(): MeasureSurface {
   }
   canvas.width = 10;
   canvas.height = 10;
-  window.__BITCHARIFY_CANVAS__ = canvas;
-  window.__BITCHARIFY_CONTEXT__ = context;
-  return { canvas, context };
+  measureSurface = { canvas, context };
+  return measureSurface;
 }
 
 // Measures font properties by creating a test canvas and measuring a sample string.
@@ -79,7 +79,7 @@ function _measureFontFallback(font: string): FontProperties {
   const width = Math.ceil(context.measureText(metricsString).width);
   let baseline = Math.ceil(context.measureText(BASELINE_SYMBOL).width);
   const height = Math.ceil(HEIGHT_MULTIPLIER * baseline);
-  baseline = (baseline * BASELINE_MULTIPLIER) | 0;
+  baseline = Math.trunc(baseline * BASELINE_MULTIPLIER);
   if (width === 0 || height === 0) {
     return properties;
   }
@@ -98,7 +98,7 @@ function _measureFontFallback(font: string): FontProperties {
   let idx = 0;
   let stop = false;
   // ascent. scan from top to bottom until we find a non red pixel
-  for (i = 0; i < baseline; ++i) {
+  for (i = 0; i < baseline; i += 1) {
     for (let j = 0; j < line; j += 4) {
       // issue: firefox returns 253 and not 255 for the red pixel value
       const red = imagedata[idx + j];
@@ -117,7 +117,7 @@ function _measureFontFallback(font: string): FontProperties {
   idx = pixels - line;
   stop = false;
   // descent. scan from bottom to top until we find a non red pixel
-  for (i = height; i > baseline; --i) {
+  for (i = height; i > baseline; i -= 1) {
     for (let j = 0; j < line; j += 4) {
       // issue: firefox returns 253 and not 255 for the red pixel value
       const red = imagedata[idx + j];
@@ -137,20 +137,8 @@ function _measureFontFallback(font: string): FontProperties {
   return properties;
 }
 
-// Applies word wrapping to text based on the font style configuration.
-function _wordWrap(text: string, style: FontStyle, canvas: HTMLCanvasElement): string {
-  console.log(text, style, canvas);
-  return text;
-}
-
 // Measures text and calculates its metrics including width, height, lines, and more.
-export const measureText = (
-  text: string,
-  style: FontStyle,
-  wordWrap: boolean | undefined | null,
-  canvas: HTMLCanvasElement
-): TextMetrics => {
-  const useWordWrap = wordWrap ?? Boolean(style.wordWrap);
+export const measureText = (text: string, style: FontStyle, canvas: HTMLCanvasElement): TextMetrics => {
   const font = toFontString(style);
   let fontProperties = _measureFont(font);
   if (!fontProperties.fontSize) {
@@ -168,8 +156,7 @@ export const measureText = (
     throw new Error('Unable to get a 2D rendering context.');
   }
   context.font = font;
-  const outputText = useWordWrap ? _wordWrap(text, style, canvas) : text;
-  const lines = outputText.split(/(?:\r\n|\r|\n)/u);
+  const lines = text.split(/(?:\r\n|\r|\n)/u);
   const lineWidths = lines.map((line) => _measureText(line, style.letterSpacing, context));
   const maxLineWidth = Math.max(0, ...lineWidths);
   let width = maxLineWidth + style.strokeThickness;
