@@ -1,5 +1,3 @@
-export const TYPE_CHECKING = true;
-
 export interface FontStyle {
   /** The font size in pixels. */
   fontSize: number;
